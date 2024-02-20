@@ -92,7 +92,7 @@ const SlideCarousel = ({ projectImages }) => {
             <img
               className="h-full mx-auto mb-4 rounded-md"
               //width={400}
-              //style={{ height: "225px" }}
+              style={{ maxHeight: "350px" }}
               src={image.src}
               alt={image.alt}
             />
@@ -107,7 +107,7 @@ const SlideCarousel = ({ projectImages }) => {
           <HiArrowSmallLeft
             color="White"
             className="opacity-70 hover:opacity-100"
-            size={20}
+            size={30}
           />
         </button>
       </div>
@@ -119,7 +119,7 @@ const SlideCarousel = ({ projectImages }) => {
           <HiArrowRight
             color="White"
             className="opacity-70 hover:opacity-100"
-            size={20}
+            size={30}
           />
         </button>
       </div>
@@ -141,7 +141,7 @@ const ModuleProject = ({
     <div className="max-w-7xl flex items-center mx-auto px-4">
       <div className="flex h-full gap-x-12">
         <div
-          className="flex flex-col gap-y-20 md:sticky  md:h-[100vh] w-full"
+          className="flex flex-col justify-center gap-y-20 md:sticky md:h-[100vh] w-full"
           style={{
             top: 0,
           }}
@@ -152,11 +152,8 @@ const ModuleProject = ({
                 <p className="mx-auto text-lg text-secondary-blue">{number}</p>
               </div>
               <div className="flex flex-col md:py-28 py-0">
-                <p className="text-5xl ml-4">{projectName}</p>
-                <div className="flex mt-12">
-                  <BsDot className="my-auto" size={30} color="#9EABA2" />
-                  <p className="text-3xl my-auto ">{rule}</p>
-                </div>
+                <p className="text-3xl ml-4">{projectName} - {rule} </p>
+                
                 <p className="ml-4 mt-4 text-xl">{description}</p>
                 <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
                   <SlideCarousel projectImages={projectImages} />
@@ -215,7 +212,7 @@ const ModuleProject = ({
 
 const ProjectsList = () => {
   return (
-    <div id="projectList" className="flex flex-col sm:gap-y-0 gap-y-24">
+    <div id="projectList" className="flex flex-col md:gap-y-0 gap-y-24">
       <ModuleProject
         number="01"
         projectName="Dashboard TWD"
@@ -229,7 +226,7 @@ const ProjectsList = () => {
       <ModuleProject
         number="02"
         projectName="TWD Website"
-        rule="Front-End Developer - Web Designer"
+        rule="Front-End Developer/ Web Designer"
         description="The Wellbeing Doctors' website provides comprehensive information about the services offered, including details on pricing, health improvement strategies, getting started, partnerships, and testimonials."
         show="Watch live"
         liveLink="https://thewellbeingdoctors.com/"
@@ -239,7 +236,7 @@ const ProjectsList = () => {
       <ModuleProject
         number="03"
         projectName="Rosa Cleaning"
-        rule="Front-End Developer - Web Designer"
+        rule="Front-End Developer/ Web Designer"
         description="Rosa Cleaning's website offers a comprehensive platform for cleaning services, enabling users to schedule appointments, and customize cleaning plans (not live yet)."
         show="Figma"
         liveLink="https://www.figma.com/proto/uGHdoF52BopWJxx44cr3wR/Untitled?type=design&node-id=564-461&t=ulYqSWCH6enl6Qa7-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=544%3A536&mode=design"

@@ -17,8 +17,7 @@ const MyProjects = () => {
           </div>
           <FadeOnScroll data="fade" duration="1000" delay="500">
           <p className="sm:text-4xl text-2xl text-gray-200 font-extralight z-20 lg:mt-12 mt-6 lg:mr-4">
-            Focused in turn ideas into visually striking websites with a focus
-            on exceptional
+          Turning ideas into visually striking websites with a focus on exceptional
             <span className="font-normal ml-2 text-primary-green">
               user experiences
             </span>
