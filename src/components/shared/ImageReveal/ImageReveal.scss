@@ -1,0 +1,21 @@
+.main {
+    .container{   
+        margin: 0 auto;
+        align-items: center;
+        visibility: hidden;  
+    }
+}
+.img-container {
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        right: 0;
+        background-color: white;
+    }
+}
