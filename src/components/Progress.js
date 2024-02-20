@@ -39,36 +39,36 @@ const RepeatFunction = () => {
               instance
                 .pause(1500)
                 .break({ delay: 250 })
-                .type('<span class="text-lg font-semibold">We lose,</span>')
+                .type('<span class="text-lg">We lose,</span>')
                 .pause(500)
                 .break({ delay: 250 })
                 .type(
-                  '<span class="text-lg font-semibold">We lose in the certainty of tomorrow, and the joy of today falls while waiting for the next opportunity.</span>'
+                  '<span class="text-lg">We lose in the certainty of tomorrow, and the joy of today falls while waiting for the next opportunity.</span>'
                 )
                 .pause(500)
                 .break({ delay: 250 })
                 .type(
-                  '<span class="text-lg font-semibold">We lose by failing to love the living, focused on the idea of worshiping the dead. </span>'
+                  '<span class="text-lg">We lose by failing to love the living, focused on the idea of worshiping the dead. </span>'
                 )
                 .pause(500)
                 .break({ delay: 250 })
                 .type(
-                  '<span class="text-lg font-semibold">We continue to fight for dreams, dreams that we believe to be ours.</span>'
+                  '<span class="text-lg">We continue to fight for dreams, dreams that we believe to be ours.</span>'
                 )
                 .pause(500)
                 .break({ delay: 250 })
                 .type(
-                  '<span class="text-lg font-semibold">We lose by prioritizing "having", when our essence should be who we are,</span>'
+                  '<span class="text-lg">We lose by prioritizing "having", when our essence should be who we are,</span>'
                 )
                 .pause(500)
                 .break({ delay: 250 })
                 .type(
-                  '<span class="text-lg font-semibold">We lose when trying to be who we were asked to be, and we die without ever knowing who we truly were.</span>'
+                  '<span class="text-lg">We lose when trying to be who we were asked to be, and we die without ever knowing who we truly were.</span>'
                 )
                 .pause(500)
                 .break({ delay: 250 })
                 .type(
-                  '<span class="text-lg font-semibold">And so we continue, allowing others to own our happiness. We lose haste, gain tranquility, and focused solely on the body, we lose the soul…</span>'
+                  '<span class="text-lg">And so we continue, allowing others to own our happiness. We lose haste, gain tranquility, and focused solely on the body, we lose the soul…</span>'
                 );
               return instance;
             }}
@@ -93,7 +93,7 @@ const Progress = () => {
                 delay="500"
               >
                 <p className="lg:text-7xl md:text-6xl text-5xl font-bold text-primary-gray lg:leading-tight leading-none md:ml-8 my-auto text-secondary-gray ">
-                  I love writing poetry, so I wrote you one,
+                  I love writing poetry, so I wrote you one
                 </p>
               </FadeOnScroll>
             </div>
