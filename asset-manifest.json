@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/test-portfolio/static/css/main.033a4748.css",
-    "main.js": "/test-portfolio/static/js/main.166ef22a.js",
-    "static/js/787.58f15db9.chunk.js": "/test-portfolio/static/js/787.58f15db9.chunk.js",
-    "static/media/healthTWDWeb.png": "/test-portfolio/static/media/healthTWDWeb.9b7f1e4b64f5e5ff6803.png",
-    "static/media/curriculum.pdf": "/test-portfolio/static/media/curriculum.1338977071a42d063b60.pdf",
-    "static/media/staffTWDWeb.png": "/test-portfolio/static/media/staffTWDWeb.48163558d5ae86942c7e.png",
-    "static/media/clinicTWD.jpeg": "/test-portfolio/static/media/clinicTWD.80aaa972bec1010e8fed.jpeg",
-    "static/media/homeTWDWeb.png": "/test-portfolio/static/media/homeTWDWeb.368abae64647136ceee3.png",
-    "static/media/homeTWD.jpeg": "/test-portfolio/static/media/homeTWD.ac4cc96337420bc572f3.jpeg",
-    "static/media/lifestyleTWD.jpeg": "/test-portfolio/static/media/lifestyleTWD.f8427e3c39c812cb96bc.jpeg",
-    "static/media/stepsRosa.png": "/test-portfolio/static/media/stepsRosa.a74129dadc4a2f77b4bd.png",
-    "static/media/heroSectionRosa.png": "/test-portfolio/static/media/heroSectionRosa.398ef00638758d4baa42.png",
-    "static/media/priceRosa.png": "/test-portfolio/static/media/priceRosa.2727a4dab0234e7fcc31.png",
-    "index.html": "/test-portfolio/index.html",
-    "main.033a4748.css.map": "/test-portfolio/static/css/main.033a4748.css.map",
-    "main.166ef22a.js.map": "/test-portfolio/static/js/main.166ef22a.js.map",
-    "787.58f15db9.chunk.js.map": "/test-portfolio/static/js/787.58f15db9.chunk.js.map"
+    "main.css": "/portfolio/static/css/main.033a4748.css",
+    "main.js": "/portfolio/static/js/main.daa7a18c.js",
+    "static/js/787.58f15db9.chunk.js": "/portfolio/static/js/787.58f15db9.chunk.js",
+    "static/media/healthTWDWeb.png": "/portfolio/static/media/healthTWDWeb.9b7f1e4b64f5e5ff6803.png",
+    "static/media/curriculum.pdf": "/portfolio/static/media/curriculum.1338977071a42d063b60.pdf",
+    "static/media/staffTWDWeb.png": "/portfolio/static/media/staffTWDWeb.48163558d5ae86942c7e.png",
+    "static/media/clinicTWD.jpeg": "/portfolio/static/media/clinicTWD.80aaa972bec1010e8fed.jpeg",
+    "static/media/homeTWDWeb.png": "/portfolio/static/media/homeTWDWeb.368abae64647136ceee3.png",
+    "static/media/homeTWD.jpeg": "/portfolio/static/media/homeTWD.ac4cc96337420bc572f3.jpeg",
+    "static/media/lifestyleTWD.jpeg": "/portfolio/static/media/lifestyleTWD.f8427e3c39c812cb96bc.jpeg",
+    "static/media/stepsRosa.png": "/portfolio/static/media/stepsRosa.a74129dadc4a2f77b4bd.png",
+    "static/media/heroSectionRosa.png": "/portfolio/static/media/heroSectionRosa.398ef00638758d4baa42.png",
+    "static/media/priceRosa.png": "/portfolio/static/media/priceRosa.2727a4dab0234e7fcc31.png",
+    "index.html": "/portfolio/index.html",
+    "main.033a4748.css.map": "/portfolio/static/css/main.033a4748.css.map",
+    "main.daa7a18c.js.map": "/portfolio/static/js/main.daa7a18c.js.map",
+    "787.58f15db9.chunk.js.map": "/portfolio/static/js/787.58f15db9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.033a4748.css",
-    "static/js/main.166ef22a.js"
+    "static/js/main.daa7a18c.js"
   ]
 }
