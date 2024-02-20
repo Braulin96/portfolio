@@ -151,10 +151,11 @@ const ModuleProject = ({
               <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2">
                 <p className="mx-auto text-lg text-secondary-blue">{number}</p>
               </div>
-              <div className="flex flex-col md:py-28 py-0">
-                <p className="text-3xl ml-4">{projectName} - {rule} </p>
+              <div className="flex flex-col md:py-28 py-0 mr-2">
+                <p className="text-3xl ml-4 font-semibold"> {rule} </p>
+                <p className="text-3xl ml-4 mt-4"> {projectName} </p>
                 
-                <p className="ml-4 mt-4 text-xl">{description}</p>
+                <p className="ml-4 mt-2 text-xl">{description}</p>
                 <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
                   <SlideCarousel projectImages={projectImages} />
                   <p className="text-sm mt-8 underline flex md:hidden">
