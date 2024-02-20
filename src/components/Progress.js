@@ -81,7 +81,7 @@ const RepeatFunction = () => {
 
 const Progress = () => {
   return (
-    <div id="progress">
+    <div id="progress" className="md:h-[100vh]">
       <div className="max-w-7xl h-full flex mx-auto w-full sm:py-52 py-24">
         <div className="flex md:flex-row flex-col items-center w-full px-4 justify-center gap-y-12">
         <div className="md:w-1/2 w-full h-1/2 ">
