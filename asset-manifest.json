@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.ccfecded.css",
-    "main.js": "/portfolio/static/js/main.60f09188.js",
+    "main.css": "/portfolio/static/css/main.39417522.css",
+    "main.js": "/portfolio/static/js/main.61629ff4.js",
     "static/js/787.58f15db9.chunk.js": "/portfolio/static/js/787.58f15db9.chunk.js",
     "static/media/healthTWDWeb.png": "/portfolio/static/media/healthTWDWeb.9b7f1e4b64f5e5ff6803.png",
     "static/media/curriculum.pdf": "/portfolio/static/media/curriculum.1338977071a42d063b60.pdf",
@@ -14,12 +14,12 @@
     "static/media/heroSectionRosa.png": "/portfolio/static/media/heroSectionRosa.398ef00638758d4baa42.png",
     "static/media/priceRosa.png": "/portfolio/static/media/priceRosa.2727a4dab0234e7fcc31.png",
     "index.html": "/portfolio/index.html",
-    "main.ccfecded.css.map": "/portfolio/static/css/main.ccfecded.css.map",
-    "main.60f09188.js.map": "/portfolio/static/js/main.60f09188.js.map",
+    "main.39417522.css.map": "/portfolio/static/css/main.39417522.css.map",
+    "main.61629ff4.js.map": "/portfolio/static/js/main.61629ff4.js.map",
     "787.58f15db9.chunk.js.map": "/portfolio/static/js/787.58f15db9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccfecded.css",
-    "static/js/main.60f09188.js"
+    "static/css/main.39417522.css",
+    "static/js/main.61629ff4.js"
   ]
 }
