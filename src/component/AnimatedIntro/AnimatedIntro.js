@@ -1,6 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import TypeIt from "typeit-react";
+
 import './AnimatedIntro.css';
 
 const AnimatedIntro = ({typeSpeed = 50 }) => {
@@ -53,7 +53,5 @@ const AnimatedIntro = ({typeSpeed = 50 }) => {
 AnimatedIntro.propTypes = {
   typeSpeed: PropTypes.number
 };
-
-
 
 export default AnimatedIntro;
