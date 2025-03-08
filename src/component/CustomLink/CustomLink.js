@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 import "./CustomLink.css";
 
-const CustomLink = ({ linkText, to, variant = 'secondary', onClick }) => {
+const CustomLink = ({ linkText, to, variant = 'secondary', onClick, customClasses = '' }) => {
 
   const getClassName = () => {
     if (variant === 'primary') {
@@ -18,7 +18,7 @@ const CustomLink = ({ linkText, to, variant = 'secondary', onClick }) => {
     <Link
       onClick={onClick}
       to={to}
-      className={getClassName()}
+      className={`${getClassName()} ${customClasses}`}
       spy={true}
       smooth={true}
       duration={1000}
@@ -32,7 +32,8 @@ CustomLink.propTypes = {
   to: PropTypes.string.isRequired,
   linkText: PropTypes.string.isRequired,
   variant: PropTypes.oneOf(['primary', 'secondary']),
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  customClasses: PropTypes.string
 };
 
 export default CustomLink;

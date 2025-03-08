@@ -1,0 +1,32 @@
+
+.fade:hover,
+.fade:focus {
+  box-shadow: inset 10em 0 0 0 var(--hover);
+  color: #00CD8F;
+}
+
+.fade {
+  --color: black;
+  --hover: #17181c;
+}
+a.fade {
+  color: var(--color);
+  transition: 0.25s;
+}
+
+a.fade:hover, button.slide:fade{
+  border-color: var(--hover);
+  color: #00CD8F;
+}
+
+a.fade {
+  background: #00CD8F;
+  border: 2px solid #00CD8F;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+}
+
+
+
+

@@ -1,23 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './HeroSection.css';
+import CustomLinkBlock from "component/CustomLinkBlock/CustomLinkBlock";
+import AnimatedIntro from "component/AnimatedIntro/AnimatedIntro";
 
-const HeroSection = (props) => {
+import Curriculum from "assets/documents/curriculum.pdf";
+
+const HeroSection = () => {
   return (
-    <div className="herosection">
-      {/* Section content goes here */}
+    <div id="home" style={{ height: "100vh", maxHeight: "1000px" }}>
+      <div className="max-w-7xl mx-auto h-full flex flex-col">
+        <div className="my-auto mx-auto text-center flex flex-col gap-y-4">
+          <div className="hidden sm:flex">
+            <AnimatedIntro/>
+          </div>
+          
+        </div>
+        <div className="animate-fade-up sm:animate-delay-[7s] animate-duration-[1s] animate-delay-[1s]">
+          <CustomLinkBlock href={Curriculum} hrefText="Resume" linkTo="contact" linkText="Let's Talk" />
+        </div>
+      </div>
     </div>
   );
-};
-
-HeroSection.propTypes = {
-  // Define your prop types here
-  // example: name: PropTypes.string.isRequired,
-};
-
-HeroSection.defaultProps = {
-  // Define default props here
-  // example: name: 'Default Name',
 };
 
 export default HeroSection;
