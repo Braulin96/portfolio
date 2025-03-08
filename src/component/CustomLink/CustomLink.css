@@ -1,3 +1,5 @@
+/* component/CustomLink/CustomLink.css */
+
 /* Secondary variant - underline animation */
 a.secondary {
   position: relative;
@@ -22,7 +24,10 @@ a.secondary:hover::before {
   transform: scaleX(1);
 }
 
-/* Primary variant - slide animation */
+a.secondary.active::before {
+  transform: scaleX(1);
+}
+
 .slide {
   --color: #00CD8F;
   --hover: #00CD8F;
@@ -38,8 +43,7 @@ a.slide {
   margin: 0.5em;
 }
 
-a.slide:hover,
-a.slide:focus {
+a.slide:hover, a.slide:focus {
   box-shadow: inset 8.5em 0 0 0 var(--hover);
   border-color: var(--hover);
   color: black;

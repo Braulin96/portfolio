@@ -1,3 +1,25 @@
 .mobilenavbar {
-  /* Component styles go here */
+  position: relative;
+}
+
+.mobile-nav-item {
+  display: block;
+  padding: 0 0.5rem;
+}
+
+.mobile-nav-item a {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-item a:hover {
+  color: #00CD8F;
+}
+
+.Nav li {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
 }
