@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 
 import './CustomButton.css';
 
-const CustomButton = (props) => {
+const CustomButton = ({ variant = 'primary'}) => {
   return (
-    <div className="custombutton">
+    <div className="customButton">
       {/* Component content goes here */}
     </div>
   );
 };
 
 CustomButton.propTypes = {
-  // Define your prop types here
-  // example: name: PropTypes.string.isRequired,
+  variant: PropTypes.oneOf(['primary', 'secondary'])
 };
 
 CustomButton.defaultProps = {

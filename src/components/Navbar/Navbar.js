@@ -1,46 +1,39 @@
-//Note: Hooks:
 import { useState, useEffect } from "react";
-//Note: Components:
+
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./Navbar.css";
-//Note: Icons:
+
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 
 const DesktopNavbar = () => {
-  const [hideNavbar, setHideNavbar] = useState(false); //state to control show or hide the Navbar
-  const [prevScrollY, setPrevScrollY] = useState(0); //state to control the scrolling y position
+  const [hideNavbar, setHideNavbar] = useState(false); 
+  const [prevScrollY, setPrevScrollY] = useState(0);
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
-
-    // Determine the scrolling direction
     const isScrollingDown = currentScrollY > prevScrollY;
-
-    // Check the scroll position and update hideNavbar accordingly
     if (currentScrollY > 100) {
       setHideNavbar(isScrollingDown);
     } else {
       setHideNavbar(false);
     }
-    // Update the previous scroll position
     setPrevScrollY(currentScrollY);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollY]); // Include prevScrollY in the dependency array
+  }, [prevScrollY]); 
 
-  //Styles to set the position for the current Navbar
   const hideDesktopNavbar = {
     width: "100%",
     transform: hideNavbar ? "translate(0px, -100px)" : "translate(0px, 0px)",
     transition: "transform 0.4s ease-in-out",
   };
+
   return (
     <div className="animate-fade-down animate-delay-[6s] animate-duration-[1s]">
       <div

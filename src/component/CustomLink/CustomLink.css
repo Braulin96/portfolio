@@ -1,3 +1,46 @@
-.customlink {
-  /* Component styles go here */
+/* Secondary variant - underline animation */
+a.secondary {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a.secondary::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00CD8F;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a.secondary:hover::before {
+  transform: scaleX(1);
+}
+
+/* Primary variant - slide animation */
+.slide {
+  --color: #00CD8F;
+  --hover: #00CD8F;
+}
+
+a.slide {
+  color: var(--color);
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+}
+
+a.slide:hover,
+a.slide:focus {
+  box-shadow: inset 8.5em 0 0 0 var(--hover);
+  border-color: var(--hover);
+  color: black;
 }

@@ -7,9 +7,13 @@ import Skills from "components/Skills";
 import Progress from "components/Progress";
 import Contact from "components/Contact";
 
+import CustomLink from "component/CustomLink/CustomLink";
+
 function App() {
   return (
     <div className="App">
+      <CustomLink variant="secondary" linkText="Home" to="home">Home</CustomLink>
+      <CustomLink variant="primary" linkText="Home" to="home">Home</CustomLink>
       <Navbar />
       <HeroSection />
       <AboutMe />
