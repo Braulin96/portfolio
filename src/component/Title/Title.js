@@ -1,23 +1,27 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+
 import './Title.css';
 
-const Title = (props) => {
+const Title = ({ firstWord, secondWord, customClasses = '' }) => {
   return (
     <div className="title">
-      {/* Component content goes here */}
+      <p className={`sm:text-8xl text-6xl font-semibold text-secondary-gray lg:leading-tight leading-none lg:mr-12 " ${customClasses}`}>
+        {firstWord}
+        {secondWord && (
+          <>
+            <br />
+            {secondWord}
+          </>
+        )}
+      </p>
     </div>
   );
 };
 
 Title.propTypes = {
-  // Define your prop types here
-  // example: name: PropTypes.string.isRequired,
-};
-
-Title.defaultProps = {
-  // Define default props here
-  // example: name: 'Default Name',
+  firstWord: PropTypes.string.isRequired,
+  secondWord: PropTypes.string,
+  customClasses: PropTypes.string
 };
 
 export default Title;

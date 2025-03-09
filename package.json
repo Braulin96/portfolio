@@ -30,7 +30,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "create:component": "node scripts/create-element.js component",
-    "create:section": "node scripts/create-element.js section"
+    "create:section": "node scripts/create-element.js section",
+    "create:layout": "node scripts/create-element.js layout"
   },
   "eslintConfig": {
     "extends": [

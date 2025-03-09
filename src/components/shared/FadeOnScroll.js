@@ -1,4 +1,4 @@
-// Note: hooks
+import PropTypes from 'prop-types';
 import { useEffect } from "react";
 // Note: components:
 import AOS from "aos";
@@ -24,4 +24,14 @@ const FadeOnScroll = ({ data,duration, delay, children, offset, className }) => 
     </div>
   );
 };
+
+FadeOnScroll.propTypes = {
+  data: PropTypes.string.isRequired,
+  duration: PropTypes.string,
+  delay: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  offset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  className: PropTypes.string
+};
+
 export default FadeOnScroll;

@@ -1,4 +1,5 @@
 //Note: hooks
+import PropTypes from 'prop-types';
 import { useRef } from "react";
 //Note: components:
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,7 +15,6 @@ import "swiper/css/bundle";
 import TiltAnimation from "./shared/TiltAnimation";
 import FadeOnScroll from "./shared/FadeOnScroll";
 //Note:images/icons:
-import { BsDot } from "react-icons/bs";
 import { GoArrowUpRight } from "react-icons/go";
 import { HiArrowSmallLeft } from "react-icons/hi2";
 import { HiArrowRight } from "react-icons/hi2";
@@ -125,6 +125,16 @@ const SlideCarousel = ({ projectImages }) => {
       </div>
     </div>
   );
+};
+
+SlideCarousel.propTypes = {
+  projectImages: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired
+    })
+  ).isRequired
 };
 
 const ModuleProject = ({
@@ -248,4 +258,22 @@ const ProjectsList = () => {
     </div>
   );
 };
+
+ModuleProject.propTypes = {
+  number: PropTypes.string.isRequired,
+  projectName: PropTypes.string.isRequired,
+  rule: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  liveLink: PropTypes.string.isRequired,
+  gitHub: PropTypes.string.isRequired,
+  show: PropTypes.string.isRequired,
+  projectImages: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired
+    })
+  ).isRequired
+};
+
 export default ProjectsList;

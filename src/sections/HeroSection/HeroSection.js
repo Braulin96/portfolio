@@ -11,7 +11,6 @@ const HeroSection = () => {
           <div className="hidden sm:flex">
             <AnimatedIntro/>
           </div>
-          
         </div>
         <div className="animate-fade-up sm:animate-delay-[7s] animate-duration-[1s] animate-delay-[1s]">
           <CustomLinkBlock href={Curriculum} hrefText="Resume" linkTo="contact" linkText="Let's Talk" />

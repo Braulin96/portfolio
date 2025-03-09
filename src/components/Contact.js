@@ -1,13 +1,12 @@
 //Note : Components
 import Lottie from "lottie-react";
 import FadeOnScroll from "./shared/FadeOnScroll";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 //Note : Icons
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import { HiOutlineArrowLongUp } from "react-icons/hi2";
 
 //Note: Lottie

@@ -1,6 +1,5 @@
 //Note: components
 import TypeIt from "typeit-react";
-import TiltAnimation from "./shared/TiltAnimation";
 import FadeOnScroll from "./shared/FadeOnScroll";
 
 {

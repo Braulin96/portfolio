@@ -1,4 +1,4 @@
-//Note:component
+import PropTypes from 'prop-types';
 import { Tilt } from "react-tilt";
 
 const defaultOptions = {
@@ -16,11 +16,17 @@ const defaultOptions = {
   maxGlare: 2,
   glarePrerender: false,
 };
-const TiltAnimation = ({ children, className }) => {
+const TiltAnimation = ({ children }) => {
   return (
     <Tilt options={defaultOptions} >
       {children}
     </Tilt>
   );
 };
+
+
+TiltAnimation.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 export default TiltAnimation;

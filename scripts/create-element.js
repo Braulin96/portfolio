@@ -2,23 +2,31 @@
 const fs = require('fs');
 const path = require('path');
 
-// Get type (component or section) and name from command line arguments
+// Get type (component, section, or layout) and name from command line arguments
 const type = process.argv[2];
 const elementName = process.argv[3];
 
 if (!type || !elementName) {
-  console.error('Please provide a type (component or section) and name');
-  console.error('Usage: node create-element.js component|section ElementName');
+  console.error('Please provide a type (component, section, or layout) and name');
+  console.error('Usage: node create-element.js component|section|layout ElementName');
   process.exit(1);
 }
 
-if (type !== 'component' && type !== 'section') {
-  console.error('Type must be either "component" or "section"');
+if (type !== 'component' && type !== 'section' && type !== 'layout') {
+  console.error('Type must be either "component", "section", or "layout"');
   process.exit(1);
 }
 
 // Determine the directory based on type
-const baseDir = type === 'component' ? 'component' : 'sections';
+let baseDir;
+if (type === 'component') {
+  baseDir = 'component';
+} else if (type === 'section') {
+  baseDir = 'sections';
+} else if (type === 'layout') {
+  baseDir = 'layout';
+}
+
 const elementDir = path.join('src', baseDir, elementName);
 
 if (!fs.existsSync(elementDir)) {
@@ -36,7 +44,7 @@ import './${elementName}.css';
 const ${elementName} = (props) => {
   return (
     <div className="${elementName.toLowerCase()}">
-      {/* ${type === 'component' ? 'Component' : 'Section'} content goes here */}
+      ${type === 'layout' ? '      {props.children}' : `      {/* ${type === 'component' ? 'Component' : 'Section'} content goes here */}`}
     </div>
   );
 };
@@ -44,6 +52,7 @@ const ${elementName} = (props) => {
 ${elementName}.propTypes = {
   // Define your prop types here
   // example: name: PropTypes.string.isRequired,
+  ${type === 'layout' ? 'children: PropTypes.node.isRequired,' : ''}
 };
 
 ${elementName}.defaultProps = {
@@ -56,7 +65,7 @@ export default ${elementName};
 
 // Create CSS file
 const cssContent = `.${elementName.toLowerCase()} {
-  /* ${type === 'component' ? 'Component' : 'Section'} styles go here */
+  /* ${type} styles go here */
 }
 `;
 
@@ -67,4 +76,4 @@ console.log(`Created ${type} file: ${elementDir}/${elementName}.js`);
 fs.writeFileSync(path.join(elementDir, `${elementName}.css`), cssContent);
 console.log(`Created CSS file: ${elementDir}/${elementName}.css`);
 
-console.log(`${type === 'component' ? 'Component' : 'Section'} ${elementName} created successfully!`);
+console.log(`${type.charAt(0).toUpperCase() + type.slice(1)} ${elementName} created successfully!`);
