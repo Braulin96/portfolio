@@ -1,5 +1,3 @@
-import React from "react";
-
 import ModuleProject from "component/ModuleProject/ModuleProject";
 
 import { PROJECT_LIST_DATA } from "constants/projectListData";

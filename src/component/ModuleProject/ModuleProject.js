@@ -75,12 +75,16 @@ const ModuleProject = ({
                 style={{ height: "100vh" }}
               >
                 <TiltAnimation>
-                  <img
-                    className="rounded-xl"
-                    width={800}
-                    src={image.src}
-                    alt={image.alt}
-                  />
+                  <div className=" relative p-[30px]">
+                    <img
+                      className="rounded-xl"
+                      width={800}
+                      src={image.src}
+                      alt={image.alt}
+                    />
+                    <div className="absolute h-full w-full top-0 left-0 right-0 bottom-0 bg-[#17181c] bg-opacity-30 hover:bg-opacity-0 transition-all duration-700"></div>
+              
+                  </div>
                 </TiltAnimation>
               </div>
             ))}
