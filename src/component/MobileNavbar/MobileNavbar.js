@@ -1,19 +1,19 @@
-import PropTypes from 'prop-types';
-import  { useState } from 'react';
+import PropTypes from "prop-types";
+import { useState } from "react";
 
-import CustomLink from 'component/CustomLink/CustomLink';
+import CustomLink from "component/CustomLink/CustomLink";
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 
-import './MobileNavbar.css';
+import "./MobileNavbar.css";
 
-const MobileNavbar = ( {navLinks }) => {
+const MobileNavbar = ({ navLinks }) => {
   const [showNavIcon, setShowNavIcon] = useState(true);
 
   const hideMobileNavbar = {
     width: "100%",
-    transform: showNavIcon ? "translate(0px, -1000px)" : "translate(0px, 0px)",
+    transform: showNavIcon ? "translate(1000px, 0px)" : "translate(0px, 0px)",
     transition: "transform 0.8s ease-in-out",
   };
 
@@ -28,20 +28,21 @@ const MobileNavbar = ( {navLinks }) => {
           onClick={() => setShowNavIcon(false)}
           className="bg-primary-green flex w-fit ml-auto p-3 rounded-full my-auto transition-all duration-300 ease-in-out shadow-2xl"
         >
-          <RxHamburgerMenu color="white" size={24} />
+          <RxHamburgerMenu color="black" size={24} />
         </button>
       </div>
       <div
         style={hideMobileNavbar}
-        className="flex flex-col bg-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full z-50"
+        className="flex flex-col bg-[#17181c] text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full z-50"
       >
-        <button onClick={() => setShowNavIcon(true)}>
-          <IoCloseSharp color="black" size={30} className="ml-auto mt-3 mr-3" />
+        <button onClick={() => setShowNavIcon(true)} className="p-1">
+          <IoCloseSharp color="white" size={24} className="ml-auto mt-3 mr-3" />
         </button>
-        <ul className="Nav my-auto flex flex-col gap-10 mx-auto text-center text-[#17181c]">
+        <ul className="Nav my-auto flex flex-col gap-10 mx-auto text-center">
           {navLinks.map((link, index) => (
             <div key={index} className="mobile-nav-item">
               <CustomLink
+              customClasses = "text-white"
                 to={link.to}
                 linkText={link.linkText}
                 variant="secondary"
@@ -60,9 +61,9 @@ MobileNavbar.propTypes = {
     PropTypes.shape({
       to: PropTypes.string.isRequired,
       linkText: PropTypes.string.isRequired,
-      isActive: PropTypes.bool
+      isActive: PropTypes.bool,
     })
-  )
+  ),
 };
 
 export default MobileNavbar;
