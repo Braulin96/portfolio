@@ -5,7 +5,7 @@ import './Title.css';
 const Title = ({ firstWord, secondWord, customClasses = '' }) => {
   return (
     <div className="title">
-      <p className={`sm:text-8xl text-6xl font-semibold text-secondary-gray lg:leading-tight leading-none lg:mr-12 " ${customClasses}`}>
+      <p className={`sm:text-[96px] text-[60px] font-semibold text-secondary-gray lg:leading-tight leading-none lg:mr-12 " ${customClasses}`}>
         {firstWord}
         {secondWord && (
           <>

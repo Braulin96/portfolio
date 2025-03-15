@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
 import FadeOnScroll from "components/shared/FadeOnScroll";
-
 import Title from "component/Title/Title";
 import Paragraph from "component/Paragraph/Paragraph";
 
@@ -23,7 +22,7 @@ const DescriptionBlock = ({
                 <Title
                   firstWord={firstTitleWord}
                   secondWord={secondTitleWord}
-                  customClasses="group-hover:text-primary-green transition-all duration-1000 opacity-30"
+                  customClasses="group-hover:text-primary-green transition-all duration-1000 opacity-20"
                 />
               </FadeOnScroll>
             </div>

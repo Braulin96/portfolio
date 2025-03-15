@@ -1,0 +1,11 @@
+.asset-link-container {
+  display: inline-block;
+}
+
+.asset-link-icon {
+  transition: color 0.3s ease, transform 0.5s ease;
+}
+
+.asset-link-container:hover .asset-link-icon {
+  color: var(--hover-color, #00CD8F) !important;
+}

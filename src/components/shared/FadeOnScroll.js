@@ -28,7 +28,7 @@ const FadeOnScroll = ({ data,duration, delay, children, offset, className }) => 
 FadeOnScroll.propTypes = {
   data: PropTypes.string.isRequired,
   duration: PropTypes.string,
-  delay: PropTypes.string,
+  delay: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   children: PropTypes.node.isRequired,
   offset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   className: PropTypes.string
