@@ -20,7 +20,7 @@ if (type !== 'component' && type !== 'section' && type !== 'layout') {
 // Determine the directory based on type
 let baseDir;
 if (type === 'component') {
-  baseDir = 'component';
+  baseDir = 'components'; // Changed from 'component' to 'components'
 } else if (type === 'section') {
   baseDir = 'sections';
 } else if (type === 'layout') {
