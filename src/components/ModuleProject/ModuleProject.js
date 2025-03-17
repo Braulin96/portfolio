@@ -1,9 +1,10 @@
-import React from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 
 import FadeOnScroll from "utils/FadeOnScroll";
 import TiltAnimation from "utils/TiltAnimation";
 import SlideCarousel from "components/SlideCarousel/SlideCarousel";
+import CustomModal from "components/CustomModal/CustomModal";
 
 import { GoArrowUpRight } from "react-icons/go";
 
@@ -17,8 +18,13 @@ const ModuleProject = ({
   show,
   projectImages,
 }) => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleCloseModal = () => setIsModalOpen(false);
+
   return (
-    <div className="max-w-7xl flex items-center mx-auto">
+    
+    <div className="max-w-7xl flex items-center mx-auto relative">
       <div className="flex h-full gap-x-12">
         <div
           className="flex flex-col justify-center gap-y-20 md:sticky md:h-[100vh] w-full"
@@ -66,7 +72,7 @@ const ModuleProject = ({
             </div>
           </FadeOnScroll>
         </div>
-        <div className="md:flex flex-col hidden my-auto gap-y-20 w-full">
+        <div className="md:flex flex-col hidden my-auto gap-y-20 w-full relative">
           <FadeOnScroll data="fade" delay="400" duration="1000" offset="600">
             {projectImages.map((image) => (
               <div
@@ -75,22 +81,30 @@ const ModuleProject = ({
                 style={{ height: "100vh" }}
               >
                 <TiltAnimation>
-                  <div className=" relative p-[30px]">
+                  <div className="relative p-[30px]">
                     <img
                       className="rounded-xl"
                       width={800}
                       src={image.src}
                       alt={image.alt}
                     />
-                    <div className="absolute h-full w-full top-0 left-0 right-0 bottom-0 bg-[#17181c] bg-opacity-30 hover:bg-opacity-0 transition-all duration-700"></div>
-
+                    <div className="absolute h-full w-full top-0 left-0 right-0 bottom-0  bg-opacity-30 hover:bg-opacity-0 transition-all duration-700"></div>
                   </div>
                 </TiltAnimation>
               </div>
             ))}
           </FadeOnScroll>
+          <div className="absolute bottom-[100px] right-[0px] z-10">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="size-[28px] rounded-full bg-secondary-gray bg-opacity-50 hover:bg-opacity-100 transition-all duration-700 flex items-center justify-center text-[15px] text-black"
+            >
+              +
+            </button>
+          </div>
         </div>
       </div>
+      <CustomModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

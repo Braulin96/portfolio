@@ -1,47 +1,28 @@
-import { useState } from 'react';
 import { Fragment } from 'react';
 // import PropTypes from 'prop-types';
 import { Dialog, Transition } from '@headlessui/react';
 
 import './CustomModal.css';
+import PropTypes from 'prop-types';
 
-const CustomModal = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
-
+const CustomModal = ({ isOpen = false, onClose}) => {
   return (
     <>
-      {/* Button to open the modal */}
-      <button
-        type="button"
-        onClick={openModal}
-        className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
-      >
-        Open Modal
-      </button>
-
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10 bg-red" onClose={closeModal}>
+        <Dialog as="div" className="relative z-10" onClose={onClose}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
             enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
+            enterTo="opacity-0"
+            leave="ease-in duration-1000"
+            leaveFrom="opacity-50"
             leaveTo="opacity-0"
           >
-            <div className="modal-overlay fixed inset-0 bg-black bg-opacity-50" />
+            <div className="modal-overlay fixed inset-0 bg-black bg-opacity-80" />
           </Transition.Child>
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex h-full min-h-full items-center justify-center p-4 text-center">
+          <div className="fixed inset-0 overflow-y-auto bg-black bg-opacity-20 flex items-center justify-center">
+            <div className="flex items-center justify-center ">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -52,13 +33,9 @@ const CustomModal = () => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  className="my-auto transform overflow-hidden p-6 text-left align-middle shadow-xl transition-all md:h-[791px] md:w-[854px] bg-white rounded-lg"
+                  className="my-auto transform overflow-hidden text-left align-middle transition-all h-[500px] w-[700px] bg-secondary-blue shadow-2xl rounded-lg"
                 >
-                  <div className="flex md:mt-[50px]">
-                    <button className="ml-auto !bg-transparent" onClick={closeModal}>
-                      close
-                    </button>
-                  </div>
+          
                   Modal content goes here
                 </Dialog.Panel>
               </Transition.Child>
@@ -70,8 +47,9 @@ const CustomModal = () => {
   );
 };
 
-// CustomModal.propTypes = {
-//   // You can add props here if needed in the future
-// };
+CustomModal.propTypes = {
+  isOpen: PropTypes.bool,
+  onClose: PropTypes.func
+};
 
 export default CustomModal;
