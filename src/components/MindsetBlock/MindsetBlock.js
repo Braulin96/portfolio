@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-import Subtitle from "component/Subtitle/Subtitle";
-import Paragraph from "component/Paragraph/Paragraph";
-import FadeOnScroll from "components/shared/FadeOnScroll";
+import Subtitle from "components/Subtitle/Subtitle";
+import Paragraph from "components/Paragraph/Paragraph";
+import FadeOnScroll from "utils/FadeOnScroll";
 
 import "./MindsetBlock.css";
 

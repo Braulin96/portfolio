@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import FadeOnScroll from "components/shared/FadeOnScroll";
-import TiltAnimation from "components/shared/TiltAnimation";
-import SlideCarousel from "component/SlideCarousel/SlideCarousel";
+import FadeOnScroll from "utils/FadeOnScroll";
+import TiltAnimation from "utils/TiltAnimation";
+import SlideCarousel from "components/SlideCarousel/SlideCarousel";
 
 import { GoArrowUpRight } from "react-icons/go";
 

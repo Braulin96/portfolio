@@ -1,7 +1,7 @@
 import ScreenContainer from "layout/ScreenContainer/ScreenContainer";
-import CustomLinkBlock from "component/CustomLinkBlock/CustomLinkBlock";
-import AnimatedIntro from "component/AnimatedIntro/AnimatedIntro";
-import StaticIntro from "component/StaticIntro/StaticIntro";
+import CustomLinkBlock from "components/CustomLinkBlock/CustomLinkBlock";
+import AnimatedIntro from "components/AnimatedIntro/AnimatedIntro";
+import StaticIntro from "components/StaticIntro/StaticIntro";
 
 // import BackgroundExample from 'assets/images/bg5.jpg';
 

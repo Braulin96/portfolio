@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import { useEffect } from "react";
-// Note: components:
+
 import AOS from "aos";
+
 import "aos/dist/aos.css";
 
 const FadeOnScroll = ({ data,duration, delay, children, offset, className }) => {

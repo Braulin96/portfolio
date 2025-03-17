@@ -1,7 +1,7 @@
 import ScreenContainer from "layout/ScreenContainer/ScreenContainer";
-import FadeOnScroll from "components/shared/FadeOnScroll";
-import Title from "component/Title/Title";
-import SkillList from "component/SkillList/SkillList";
+import FadeOnScroll from "utils/FadeOnScroll";
+import Title from "components/Title/Title";
+import SkillList from "components/SkillList/SkillList";
 
 import { SKILLS_LIST } from "constants/skillsList";
 

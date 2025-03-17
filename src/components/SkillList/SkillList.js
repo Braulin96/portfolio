@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import FadeOnScroll from "components/shared/FadeOnScroll";
+import FadeOnScroll from "utils/FadeOnScroll";
 
 const SkillList = ({ skills, delay, hasMarginTop = false }) => {
   return (

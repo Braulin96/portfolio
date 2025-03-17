@@ -1,9 +1,9 @@
 import ScreenContainer from "layout/ScreenContainer/ScreenContainer";
-import MindsetBlock from "component/MindsetBlock/MindsetBlock";
-import FadeOnScroll from "components/shared/FadeOnScroll";
-import Paragraph from "component/Paragraph/Paragraph";
-import BackOnTop from "component/BackOnTop/BackOnTop";
-import Contact from "component/Contact/Contact";
+import MindsetBlock from "components/MindsetBlock/MindsetBlock";
+import FadeOnScroll from "utils/FadeOnScroll";
+import Paragraph from "components/Paragraph/Paragraph";
+import BackOnTop from "components/BackOnTop/BackOnTop";
+import Contact from "components/Contact/Contact";
 
 import { SOCIAL_LINKS } from "constants/socialLinks";
 

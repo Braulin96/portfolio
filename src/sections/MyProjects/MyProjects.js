@@ -1,5 +1,5 @@
 import ScreenContainer from "layout/ScreenContainer/ScreenContainer";
-import DescriptionBlock from "component/DescriptionBlock/DescriptionBlock";
+import DescriptionBlock from "components/DescriptionBlock/DescriptionBlock";
 
 import BackgroundExample from "assets/images/bg16.jpg";
 

@@ -1,4 +1,4 @@
-import ModuleProject from "component/ModuleProject/ModuleProject";
+import ModuleProject from "components/ModuleProject/ModuleProject";
 
 import { PROJECT_LIST_DATA } from "constants/projectListData";
 

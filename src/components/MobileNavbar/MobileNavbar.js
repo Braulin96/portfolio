@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-import CustomLink from "component/CustomLink/CustomLink";
+import CustomLink from "components/CustomLink/CustomLink";
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 
-import CustomLink from 'component/CustomLink/CustomLink';
+import CustomLink from 'components/CustomLink/CustomLink';
 
 import './DesktopNavbar.css';
 

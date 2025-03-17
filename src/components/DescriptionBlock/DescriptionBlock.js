@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-import FadeOnScroll from "components/shared/FadeOnScroll";
-import Title from "component/Title/Title";
-import Paragraph from "component/Paragraph/Paragraph";
+import FadeOnScroll from "utils/FadeOnScroll";
+import Title from "components/Title/Title";
+import Paragraph from "components/Paragraph/Paragraph";
 
 import "./DescriptionBlock.css";
 

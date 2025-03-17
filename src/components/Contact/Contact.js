@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import AssetLink from "component/AssetLink/AssetLink";
+import AssetLink from "components/AssetLink/AssetLink";
 
 import './Contact.css';
 
