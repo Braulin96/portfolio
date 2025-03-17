@@ -18,7 +18,7 @@ const ModuleProject = ({
   projectImages,
 }) => {
   return (
-    <div className="max-w-7xl flex items-center mx-auto px-4">
+    <div className="max-w-7xl flex items-center mx-auto">
       <div className="flex h-full gap-x-12">
         <div
           className="flex flex-col justify-center gap-y-20 md:sticky md:h-[100vh] w-full"
@@ -36,7 +36,7 @@ const ModuleProject = ({
                 <p className="text-3xl ml-4 mt-4"> {projectName} </p>
 
                 <p className="ml-4 mt-2 text-xl">{description}</p>
-                <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
+                <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden mx-auto">
                   <SlideCarousel projectImages={projectImages} />
                   <p className="text-sm mt-8 underline flex md:hidden">
                     React App
@@ -83,6 +83,7 @@ const ModuleProject = ({
                       alt={image.alt}
                     />
                     <div className="absolute h-full w-full top-0 left-0 right-0 bottom-0 bg-[#17181c] bg-opacity-30 hover:bg-opacity-0 transition-all duration-700"></div>
+
                   </div>
                 </TiltAnimation>
               </div>

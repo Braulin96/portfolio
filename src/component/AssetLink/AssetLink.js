@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import './AssetLink.css';
 
 const AssetLink = ({ 
@@ -6,7 +7,7 @@ const AssetLink = ({
   icon: Icon, 
   isMailTo = false, 
   iconColor = "white", 
-  hoverColor = "#00CD8F"  // Your primary green color
+  hoverColor = "#00CD8F"
 }) => {
   return (
     <a

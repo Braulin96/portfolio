@@ -34,13 +34,13 @@ const DesktopNavbar = ({ navLinks }) => {
   };
 
   return (
-    <div className="animate-fade-down animate-delay-[6s] animate-duration-[1s]">
+    <div className="animate-fade-down animate-delay-[6s] animate-duration-[1s">
       <div
-        className="flex justify-between bg-secondary-blue pt-2"
+        className="flex justify-between bg-secondary-blue py-[8px] px-[20px]"
         style={hideDesktopNavbar}
       >
         <div className="Nav flex text-gray-200 justify-end h-12 my-auto">
-          <ul className="my-auto flex gap-x-14 mt-4 mr-4">
+          <ul className="my-auto flex gap-x-14 mt-4 mr-4 ">
             {navLinks.map((link, index) => (
               <CustomLink
                 key={index}

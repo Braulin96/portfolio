@@ -1,13 +1,21 @@
+import ScreenContainer from "layout/ScreenContainer/ScreenContainer";
 import CustomLinkBlock from "component/CustomLinkBlock/CustomLinkBlock";
 import AnimatedIntro from "component/AnimatedIntro/AnimatedIntro";
 import StaticIntro from "component/StaticIntro/StaticIntro";
 
+// import BackgroundExample from 'assets/images/bg5.jpg';
+
+import BackgroundExample from 'assets/images/bg15.jpg';
 import Curriculum from "assets/documents/curriculum.pdf";
 
 const HeroSection = () => {
   return (
-    <div id="home" style={{ height: "100vh", maxHeight: "1000px" }}>
-      <div className="max-w-7xl mx-auto h-full flex flex-col">
+    <ScreenContainer 
+      isHeroSection={true} 
+      id="home" 
+      backgroundImageOverlay={BackgroundExample}
+    >
+      <div className="mx-auto flex flex-col h-full">
         <div className="my-auto mx-auto text-center flex flex-col gap-y-4">
           <div className="hidden sm:block">
             <AnimatedIntro />
@@ -20,7 +28,7 @@ const HeroSection = () => {
           <CustomLinkBlock href={Curriculum} hrefText="Resume" linkTo="contact" linkText="Let's Talk" />
         </div>
       </div>
-    </div>
+    </ScreenContainer>
   );
 };
 

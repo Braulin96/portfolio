@@ -5,27 +5,17 @@ import AboutMe from "sections/AboutMe/AboutMe";
 import MyProjects from "sections/MyProjects/MyProjects";
 import Skills from "sections/Skills/Skills";
 import Footer from "sections/Footer/Footer";
-
-// import Navbar from "components/Navbar/Navbar";
-// import AboutMe from "components/AboutMe";
-// import MyProjects from "components/MyProjects";
-import ProjectsList from "components/ProjectsList";
-// import Skills from "components/Skills";
-// import Progress from "components/Progress";
-// import Contact from "components/Contact";
-
+import ProjectsList from "sections/ProjectList/ProjectList";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex flex-col gap-y-[10px]">
       <Navbar />
       <HeroSection />
       <AboutMe />
       <MyProjects />
       <ProjectsList />
       <Skills />
-      {/* <Progress /> */}
-      {/* <Contact /> */}
       <Footer/>
     </div>
   );

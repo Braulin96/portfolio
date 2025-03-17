@@ -14,7 +14,7 @@ const MindsetBlock = ({
 }) => {
   return (
     <div className="mindsetblock">
-      <div className="flex flex-col px-[16px] gap-y-[16px] w-full">
+      <div className="flex flex-col gap-y-[16px] w-full">
         <FadeOnScroll
           data="fade"
           duration="1000"
