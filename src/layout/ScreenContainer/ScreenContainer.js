@@ -11,8 +11,8 @@ const ScreenContainer = ({
   return (
     <div
       id={id}
-      className={`screencontainer relative sm:h-screen sm:py-0 sm:px-[20px] px-[10px] ${customClasses} ${
-        isHeroSection ? "h-[100vh]" : "h-[calc(100vh-20px)]"
+      className={`screencontainer relative sm:h-screen sm:py-0 px-[20px] ${customClasses} ${
+        isHeroSection ? "h-[100vh]" : "lg:h-[calc(100vh-20px)] h-fit py-[150px]"
       }`}
     >
       {backgroundImageOverlay && (

@@ -11,12 +11,12 @@ import './CustomLinkBlock.css';
 const CustomLinkBlock = ({ href, linkTo, hrefText, linkText  }) => {
   return (
     <div className="customlinkblock">
-        <div className="bg-white bg-opacity-5 px-4 w-fit mx-auto rounded-full flex mb-12 gap-x-2">
+        <div className="bg-white bg-opacity-5 w-fit mx-auto rounded-full flex mb-12 gap-x-2">
           <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex"
+            className="fade cursor-pointer px-6 py-1.5 rounded-full my-auto flex"
           >
             <p className="font-semibold text-lg">{hrefText}</p>
             <GoArrowUpRight size={20} className="my-auto" />

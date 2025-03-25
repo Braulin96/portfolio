@@ -5,7 +5,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import './CustomModal.css';
 import PropTypes from 'prop-types';
 
-const CustomModal = ({ isOpen = false, onClose}) => {
+const CustomModal = ({ isOpen = false, onClose, children}) => {
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -33,10 +33,9 @@ const CustomModal = ({ isOpen = false, onClose}) => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  className="my-auto transform overflow-hidden text-left align-middle transition-all h-[500px] w-[700px] bg-secondary-blue shadow-2xl rounded-lg"
+                  className="my-auto transform overflow-hidden transition-all h-[500px] w-[700px] bg-secondary-blue shadow-2xl rounded-[8px] justify-center p-[20px] flex items-center flex-col"
                 >
-          
-                  Modal content goes here
+                  {children}
                 </Dialog.Panel>
               </Transition.Child>
             </div>
@@ -49,7 +48,8 @@ const CustomModal = ({ isOpen = false, onClose}) => {
 
 CustomModal.propTypes = {
   isOpen: PropTypes.bool,
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+  children: PropTypes.node
 };
 
 export default CustomModal;

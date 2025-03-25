@@ -8,7 +8,7 @@ const CustomLink = ({ linkText, to, variant = 'secondary', onClick, customClasse
 
   const getClassName = () => {
     if (variant === 'primary') {
-      return "primary slide ml-4 cursor-pointer px-[25px] py-[6px] rounded-full my-auto";
+      return "primary slide cursor-pointer px-[25px] py-[6px] rounded-full my-auto";
     } else {
       return "secondary";
     }

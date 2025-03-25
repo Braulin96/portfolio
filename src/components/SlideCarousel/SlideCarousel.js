@@ -14,7 +14,7 @@ import "swiper/css/bundle";
 
 import { HiArrowSmallLeft, HiArrowRight } from "react-icons/hi2";
 
-const SlideCarousel = ({ projectImages }) => {
+const SlideCarousel = ({ projectImages, isMobile = false }) => {
   const swiperRef = useRef();
   return (
     <div
@@ -27,7 +27,7 @@ const SlideCarousel = ({ projectImages }) => {
         loop={true}
         centeredSlides={true}
         spaceBetween={5}
-        effect={"cube"}
+        effect={isMobile ? "cube" : null}
         grabCursor={true}
         cubeEffect={{
           shadow: true,
@@ -96,9 +96,10 @@ SlideCarousel.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       src: PropTypes.string.isRequired,
-      alt: PropTypes.string.isRequired
+      alt: PropTypes.string.isRequired,
     })
-  ).isRequired
+  ).isRequired,
+  isMobile: PropTypes.bool
 };
 
 export default SlideCarousel;

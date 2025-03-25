@@ -18,12 +18,10 @@ const ModuleProject = ({
   show,
   projectImages,
 }) => {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleCloseModal = () => setIsModalOpen(false);
 
   return (
-    
     <div className="max-w-7xl flex items-center mx-auto relative">
       <div className="flex h-full gap-x-12">
         <div
@@ -38,22 +36,22 @@ const ModuleProject = ({
                 <p className="mx-auto text-lg text-secondary-blue">{number}</p>
               </div>
               <div className="flex flex-col md:py-28 py-0 mr-2">
-                <p className="text-3xl ml-4 font-semibold"> {rule} </p>
-                <p className="text-3xl ml-4 mt-4"> {projectName} </p>
+                <p className="text-3xl font-semibold"> {rule} </p>
+                <p className="text-3xl mt-4"> {projectName} </p>
 
-                <p className="ml-4 mt-2 text-xl">{description}</p>
+                <p className="mt-2 text-xl">{description}</p>
                 <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden mx-auto">
-                  <SlideCarousel projectImages={projectImages} />
+                  <SlideCarousel isMobile projectImages={projectImages} />
                   <p className="text-sm mt-8 underline flex md:hidden">
                     React App
                   </p>
                 </div>
-                <div className="bg-white bg-opacity-5 px-4 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
+                <div className="bg-white bg-opacity-5 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
                   <a
                     href={liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex"
+                    className="fade cursor-pointer px-6 py-1.5 rounded-full my-auto flex"
                   >
                     <p className="font-semibold text-lg">{show}</p>
                     <GoArrowUpRight size={20} className="my-auto" />
@@ -104,7 +102,9 @@ const ModuleProject = ({
           </div>
         </div>
       </div>
-      <CustomModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <CustomModal isOpen={isModalOpen} onClose={handleCloseModal}>
+        <SlideCarousel projectImages={projectImages} />
+      </CustomModal>
     </div>
   );
 };
