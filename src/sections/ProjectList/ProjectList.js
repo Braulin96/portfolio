@@ -9,6 +9,7 @@ const ProjectsList = () => {
         <ModuleProject
           key={project.id}
           number={project.number}
+          frameworksList={project.frameworksList}
           projectName={project.projectName}
           rule={project.rule}
           description={project.description}
@@ -16,6 +17,7 @@ const ProjectsList = () => {
           liveLink={project.liveLink}
           gitHub={project.gitHub}
           projectImages={project.projectImages}
+        
         />
       ))}
     </div>

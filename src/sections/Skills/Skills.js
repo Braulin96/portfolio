@@ -3,11 +3,13 @@ import FadeOnScroll from "utils/FadeOnScroll";
 import Title from "components/Title/Title";
 import SkillList from "components/SkillList/SkillList";
 
+import BackgroundExample from "assets/images/bg16.jpg";
+
 import { SKILLS_LIST } from "constants/skillsList";
 
 const Skills = () => {
   return (
-  <ScreenContainer customClasses="items-center flex" id="skills">
+  <ScreenContainer backgroundImageOverlay={BackgroundExample}  customClasses="items-center flex" id="skills">
       <div className="lg:flex items-center group my-auto h-full">
         <FadeOnScroll data="fade" delay="0" duration="1000">
           <Title

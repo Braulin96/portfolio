@@ -17,6 +17,7 @@ const ModuleProject = ({
   gitHub,
   show,
   projectImages,
+  frameworksList
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleCloseModal = () => setIsModalOpen(false);
@@ -43,7 +44,7 @@ const ModuleProject = ({
                 <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden mx-auto">
                   <SlideCarousel isMobile projectImages={projectImages} />
                   <p className="text-sm mt-8 underline flex md:hidden">
-                    React App
+                    Frameworks:
                   </p>
                 </div>
                 <div className="bg-white bg-opacity-5 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
@@ -66,7 +67,9 @@ const ModuleProject = ({
                   </a>
                 </div>
               </div>
-              <p className="text-xl underline md:flex hidden">React App</p>
+              <p className="text-xl md:flex hidden">Frameworks: <span>{frameworksList.map((frames,i) => 
+                <p className="text-red-300 inline-flex ml-[4px]" key={i}>{frames} {i+1 < frameworksList.length ? ",":""}</p>
+              )}</span></p>
             </div>
           </FadeOnScroll>
         </div>
@@ -124,6 +127,7 @@ ModuleProject.propTypes = {
       alt: PropTypes.string.isRequired,
     })
   ).isRequired,
+  frameworksList:PropTypes.array
 };
 
 export default ModuleProject;

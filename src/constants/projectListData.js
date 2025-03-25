@@ -32,6 +32,10 @@ const rosaCleaningImages = [
   { id: 3, src: StepsRosa, alt: "Steps RosaCleaning" },
 ];
 
+const dashboardFrameworks = ['react', 'tailwind']
+const  twdWebFrameworks = ['react', 'css']
+const  rosaCleaningFrameworks = ['Vue', 'css']
+
 export const PROJECT_LIST_DATA = [
   {
     id: 1,
@@ -42,7 +46,8 @@ export const PROJECT_LIST_DATA = [
     show: "Watch live",
     liveLink: "https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/",
     gitHub: "https://github.com/twd-tech/twd-health",
-    projectImages: dashboardTWDImages
+    projectImages: dashboardTWDImages,
+    frameworksList:dashboardFrameworks,
   },
   {
     id: 2,
@@ -53,7 +58,8 @@ export const PROJECT_LIST_DATA = [
     show: "Watch live",
     liveLink: "https://thewellbeingdoctors.com/",
     gitHub: "https://github.com/twd-tech/website",
-    projectImages: twdWebImages
+    projectImages: twdWebImages,
+    frameworksList:twdWebFrameworks,
   },
   {
     id: 3,
@@ -64,6 +70,7 @@ export const PROJECT_LIST_DATA = [
     show: "Figma",
     liveLink: "https://www.figma.com/proto/uGHdoF52BopWJxx44cr3wR/Untitled?type=design&node-id=564-461&t=ulYqSWCH6enl6Qa7-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=544%3A536&mode=design",
     gitHub: "https://github.com/Braulin96/RosaCleaning",
-    projectImages: rosaCleaningImages
+    projectImages: rosaCleaningImages,
+    frameworksList:rosaCleaningFrameworks,
   }
 ];
