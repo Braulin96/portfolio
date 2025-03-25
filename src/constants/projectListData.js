@@ -39,7 +39,6 @@ const  rosaCleaningFrameworks = ['Vue', 'css']
 export const PROJECT_LIST_DATA = [
   {
     id: 1,
-    number: "01",
     projectName: "Dashboard TWD",
     rule: "Front-End Developer",
     description: "The Wellbeing Doctors' dashboard facilitates the creation of personalized action plans for users, alongside features for tracking health progress and accessing various health resources.",
@@ -51,7 +50,6 @@ export const PROJECT_LIST_DATA = [
   },
   {
     id: 2,
-    number: "02",
     projectName: "TWD Website",
     rule: "Front-End Developer/ Web Designer",
     description: "The Wellbeing Doctors' website provides comprehensive information about the services offered, including details on pricing, health improvement strategies, getting started, partnerships, and testimonials.",
@@ -63,7 +61,6 @@ export const PROJECT_LIST_DATA = [
   },
   {
     id: 3,
-    number: "03",
     projectName: "Rosa Cleaning",
     rule: "Front-End Developer/ Web Designer",
     description: "Rosa Cleaning's website offers a comprehensive platform for cleaning services, enabling users to schedule appointments, and customize cleaning plans (not live yet).",

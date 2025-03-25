@@ -7,17 +7,17 @@ import SlideCarousel from "components/SlideCarousel/SlideCarousel";
 import CustomModal from "components/CustomModal/CustomModal";
 
 import { GoArrowUpRight } from "react-icons/go";
+import { FaPlus } from "react-icons/fa";
 
 const ModuleProject = ({
   number,
   projectName,
-  rule,
   description,
   liveLink,
   gitHub,
   show,
   projectImages,
-  frameworksList
+  frameworksList,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleCloseModal = () => setIsModalOpen(false);
@@ -37,7 +37,6 @@ const ModuleProject = ({
                 <p className="mx-auto text-lg text-secondary-blue">{number}</p>
               </div>
               <div className="flex flex-col md:py-28 py-0 mr-2">
-                <p className="text-3xl font-semibold"> {rule} </p>
                 <p className="text-3xl mt-4"> {projectName} </p>
 
                 <p className="mt-2 text-xl">{description}</p>
@@ -67,9 +66,16 @@ const ModuleProject = ({
                   </a>
                 </div>
               </div>
-              <p className="text-xl md:flex hidden">Frameworks: <span>{frameworksList.map((frames,i) => 
-                <p className="text-red-300 inline-flex ml-[4px]" key={i}>{frames} {i+1 < frameworksList.length ? ",":""}</p>
-              )}</span></p>
+              <p className="text-[16px] md:flex hidden">
+                Frameworks:{" "}
+                <span>
+                  {frameworksList.map((frames, i) => (
+                    <p className={`inline-flex ml-[4px]`} key={i}>
+                      {frames} {i + 1 < frameworksList.length ? "," : "."}
+                    </p>
+                  ))}
+                </span>
+              </p>
             </div>
           </FadeOnScroll>
         </div>
@@ -98,9 +104,9 @@ const ModuleProject = ({
           <div className="absolute bottom-[100px] right-[0px] z-10">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="size-[28px] rounded-full bg-secondary-gray bg-opacity-50 hover:bg-opacity-100 transition-all duration-700 flex items-center justify-center text-[15px] text-black"
+              className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2 opacity-50 hover:opacity-100 transition-all duration-700"
             >
-              +
+              <FaPlus size={15} className="m-auto" color="secondary-blue" />
             </button>
           </div>
         </div>
@@ -115,7 +121,6 @@ const ModuleProject = ({
 ModuleProject.propTypes = {
   number: PropTypes.string.isRequired,
   projectName: PropTypes.string.isRequired,
-  rule: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   liveLink: PropTypes.string.isRequired,
   gitHub: PropTypes.string.isRequired,
@@ -127,7 +132,7 @@ ModuleProject.propTypes = {
       alt: PropTypes.string.isRequired,
     })
   ).isRequired,
-  frameworksList:PropTypes.array
+  frameworksList: PropTypes.array,
 };
 
 export default ModuleProject;
