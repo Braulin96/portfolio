@@ -5,6 +5,7 @@ import FadeOnScroll from "utils/FadeOnScroll";
 import TiltAnimation from "utils/TiltAnimation";
 import SlideCarousel from "components/SlideCarousel/SlideCarousel";
 import CustomModal from "components/CustomModal/CustomModal";
+import Subtitle from "components/Subtitle/Subtitle";
 
 import { GoArrowUpRight } from "react-icons/go";
 import { FaPlus } from "react-icons/fa";
@@ -38,7 +39,6 @@ const ModuleProject = ({
               </div>
               <div className="flex flex-col md:py-28 py-0 mr-2">
                 <p className="text-3xl mt-4"> {projectName} </p>
-
                 <p className="mt-2 text-xl">{description}</p>
                 <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden mx-auto">
                   <SlideCarousel isMobile projectImages={projectImages} />
@@ -67,7 +67,7 @@ const ModuleProject = ({
                 </div>
               </div>
               <p className="text-[16px] md:flex hidden">
-                Frameworks:{" "}
+                Frameworks:
                 <span>
                   {frameworksList.map((frames, i) => (
                     <p className={`inline-flex ml-[4px]`} key={i}>
@@ -101,17 +101,20 @@ const ModuleProject = ({
               </div>
             ))}
           </FadeOnScroll>
-          <div className="absolute bottom-[100px] right-[0px] z-10">
+          <div className="absolute bottom-[145px] right-[0px] z-10">
             <button
               onClick={() => setIsModalOpen(true)}
               className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2 opacity-50 hover:opacity-100 transition-all duration-700"
             >
-              <FaPlus size={15} className="m-auto" color="secondary-blue" />
+              <FaPlus size={15} className="m-auto" color="black" />
             </button>
           </div>
         </div>
       </div>
       <CustomModal isOpen={isModalOpen} onClose={handleCloseModal}>
+        <div className="mb-[12px]">
+          <Subtitle variant="md" text={projectName} />
+        </div>
         <SlideCarousel projectImages={projectImages} />
       </CustomModal>
     </div>

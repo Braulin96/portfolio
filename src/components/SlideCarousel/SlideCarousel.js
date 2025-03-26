@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,15 +16,25 @@ import { HiArrowSmallLeft, HiArrowRight } from "react-icons/hi2";
 
 const SlideCarousel = ({ projectImages, isMobile = false }) => {
   const swiperRef = useRef();
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+  
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.realIndex);
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+  };
+
   return (
     <div
       className="w-fit relative sm:px-20"
-      style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
+      style={{ maxWidth: `${isMobile ? "calc(100w - 10px)" : ""}`, width: `${isMobile ? "calc(100vw - 2rem)" : ""}` }}
     >
       <Swiper
         className="flex w-full px-20 relative justify-center items-center mx-auto"
         slidesPerView={"auto"}
-        loop={true}
+        loop={false}
         centeredSlides={true}
         spaceBetween={5}
         effect={isMobile ? "cube" : null}
@@ -51,6 +61,8 @@ const SlideCarousel = ({ projectImages, isMobile = false }) => {
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
+        onSlideChange={handleSlideChange}
+        onInit={handleSlideChange}
       >
         {projectImages.map((image) => (
           <SwiperSlide className="mx-auto w-full flex mb-4" key={image.id}>
@@ -63,30 +75,36 @@ const SlideCarousel = ({ projectImages, isMobile = false }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="z-20 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
+      
+      <div className={`z-20 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full`}>
         <button
-          className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
-          onClick={() => swiperRef.current?.slidePrev()}
+          className={`bg-secondary-gray rounded-full p-1 transition-all duration-700 ${!isMobile && isBeginning ? "opacity-0 cursor-auto" : "opacity-80 hover:opacity-100"}`}
+          onClick={() => !isMobile && isBeginning ? null: swiperRef.current?.slidePrev()}
         >
           <HiArrowSmallLeft
-            color="White"
-            className="opacity-70 hover:opacity-100"
-            size={30}
+            color="black"
+            size={24}
           />
         </button>
       </div>
-      <div className="z-20 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
+      
+      <div className={`z-20 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full`}>
         <button
-          className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
-          onClick={() => swiperRef.current?.slideNext()}
+          className={`bg-secondary-gray shadow-2xl border rounded-full p-1 transition-all duration-700 ${!isMobile && isEnd ? "opacity-0 cursor-auto" : "opacity-80 hover:opacity-100 "}`}
+          onClick={() => !isMobile && isEnd ? null: swiperRef.current?.slideNext()}
         >
           <HiArrowRight
-            color="White"
-            className="opacity-70 hover:opacity-100"
-            size={30}
+            color="black"
+            size={24}
           />
         </button>
       </div>
+      
+      {!isMobile && (
+        <div className="absolute -bottom-[15px] left-1/2 transform -translate-x-1/2 mb-2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
+          {activeIndex + 1} / {projectImages.length}
+        </div>
+      )}
     </div>
   );
 };

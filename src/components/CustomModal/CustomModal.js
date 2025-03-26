@@ -33,7 +33,7 @@ const CustomModal = ({ isOpen = false, onClose, children}) => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  className="my-auto transform overflow-hidden transition-all h-[500px] w-[700px] bg-secondary-blue shadow-2xl rounded-[8px] justify-center p-[20px] flex items-center flex-col"
+                  className="my-auto transform overflow-hidden transition-all h-[500px] w-[700px] bg-secondary-blue shadow-2xl rounded-[8px] justify-center px-[20px] flex items-center flex-col"
                 >
                   {children}
                 </Dialog.Panel>
