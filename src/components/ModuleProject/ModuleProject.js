@@ -80,34 +80,38 @@ const ModuleProject = ({
           </FadeOnScroll>
         </div>
         <div className="md:flex flex-col hidden my-auto gap-y-20 w-full relative">
-          <FadeOnScroll data="fade" delay="400" duration="1000" offset="600">
-            {projectImages.map((image) => (
-              <div
-                key={image.id}
-                className="flex h-full flex-col my-auto items-center justify-center"
-                style={{ height: "100vh" }}
-              >
-                <TiltAnimation>
-                  <div className="relative p-[30px]">
-                    <img
-                      className="rounded-xl"
-                      width={800}
-                      src={image.src}
-                      alt={image.alt}
-                    />
-                    <div className="absolute h-full w-full top-0 left-0 right-0 bottom-0  bg-opacity-30 hover:bg-opacity-0 transition-all duration-700"></div>
-                  </div>
-                </TiltAnimation>
-              </div>
-            ))}
-          </FadeOnScroll>
-          <div className="absolute bottom-[145px] right-[0px] z-10">
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2 opacity-50 hover:opacity-100 transition-all duration-700"
-            >
-              <FaPlus size={15} className="m-auto" color="black" />
-            </button>
+          <div className="h-fit mb-[10px]">
+            <FadeOnScroll data="fade" delay="400" duration="1000" offset="600">
+              {projectImages.map((image, i) => (
+                <div
+                  key={image.id}
+                  className="flex h-full flex-col my-auto items-center justify-center"
+                  style={{ height: "90vh" }}
+                >
+                  <TiltAnimation>
+                    <div className="relative p-[30px]">
+                      <img
+                        className="rounded-xl"
+                        width={800}
+                        src={image.src}
+                        alt={image.alt}
+                      />
+                      <div className="absolute h-full w-full top-0 left-0 right-0 bottom-0  bg-opacity-30 hover:bg-opacity-0 transition-all duration-700"></div>
+                    </div>
+                  </TiltAnimation>
+                  {
+                    (projectImages.length === i + 1 && (
+                      <button
+                        onClick={() => setIsModalOpen(true)}
+                        className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2 opacity-50 hover:opacity-100 transition-all duration-700 ml-auto mt-[0px]"
+                      >
+                        <FaPlus size={15} className="m-auto" color="black" />
+                      </button>
+                    ))
+                  }
+                </div>
+              ))}
+            </FadeOnScroll>
           </div>
         </div>
       </div>
