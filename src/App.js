@@ -10,7 +10,8 @@ import CustomModal from "components/CustomModal/CustomModal";
 
 function App() {
   return (
-    <div className="App flex flex-col gap-y-[10px]">
+    <div className="App flex flex-col gap-y-[10px] max-w-[1800px] mx-auto">
+      <div className="mx-auto w-full h-full">
       <Navbar />
       <HeroSection />
       <CustomModal/>
@@ -19,6 +20,7 @@ function App() {
       <ProjectsList />
       <Skills />
       <Footer/>
+      </div>
     </div>
   );
 }

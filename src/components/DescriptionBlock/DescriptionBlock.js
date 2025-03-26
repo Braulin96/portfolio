@@ -15,7 +15,7 @@ const DescriptionBlock = ({
 }) => {
   return (
       <div className="descriptionblock h-full w-full group ">
-        <div className="max-w-7xl h-full flex items-center justify-center mx-auto">
+        <div className="h-full flex items-center justify-center mx-auto">
           <div className="lg:flex items-center justify-center mx-auto">
             <div className={!isTitleFirst ? "order-2" : ""}>
               <FadeOnScroll data="fade" duration="1000" delay="0">

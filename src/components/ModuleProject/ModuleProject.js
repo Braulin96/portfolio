@@ -23,8 +23,10 @@ const ModuleProject = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleCloseModal = () => setIsModalOpen(false);
 
+  const numberOfProjectsImages = 3
+
   return (
-    <div className="max-w-7xl flex items-center mx-auto relative">
+    <div className="flex items-center mx-auto relative">
       <div className="flex h-full gap-x-12">
         <div
           className="flex flex-col justify-center gap-y-20 md:sticky md:h-[100vh] w-full"
@@ -42,9 +44,16 @@ const ModuleProject = ({
                 <p className="mt-2 text-xl">{description}</p>
                 <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden mx-auto">
                   <SlideCarousel isMobile projectImages={projectImages} />
-                  <p className="text-sm mt-8 underline flex md:hidden">
-                    Frameworks:
-                  </p>
+                  <p className="text-[16px] flex md:hidden mt-[8px]">
+                Frameworks:
+                <span>
+                  {frameworksList.map((frames, i) => (
+                    <p className={`inline-flex ml-[4px]`} key={i}>
+                      {frames} {i + 1 < frameworksList.length ? "," : "."}
+                    </p>
+                  ))}
+                </span>
+              </p>
                 </div>
                 <div className="bg-white bg-opacity-5 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
                   <a
@@ -82,7 +91,7 @@ const ModuleProject = ({
         <div className="md:flex flex-col hidden my-auto gap-y-20 w-full relative">
           <div className="h-fit mb-[10px]">
             <FadeOnScroll data="fade" delay="400" duration="1000" offset="600">
-              {projectImages.map((image, i) => (
+              {projectImages.slice(0,numberOfProjectsImages).map((image, i) => (
                 <div
                   key={image.id}
                   className="flex h-full flex-col my-auto items-center justify-center"
@@ -100,10 +109,10 @@ const ModuleProject = ({
                     </div>
                   </TiltAnimation>
                   {
-                    (projectImages.length === i + 1 && (
+                    (numberOfProjectsImages === i + 1 && (
                       <button
                         onClick={() => setIsModalOpen(true)}
-                        className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2 opacity-50 hover:opacity-100 transition-all duration-700 ml-auto mt-[0px]"
+                        className="bg-[#F5F5F5] rounded-full w-[30px] aspect-square md:flex hidden items-center border-2 opacity-50 hover:opacity-100 transition-all duration-700 ml-auto mt-[0px]"
                       >
                         <FaPlus size={15} className="m-auto" color="black" />
                       </button>

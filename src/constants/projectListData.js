@@ -18,18 +18,24 @@ const dashboardTWDImages = [
   { id: 1, src: HeroSectionTWD, alt: "Hero section TWD" },
   { id: 2, src: ClinicTWD, alt: "Clinic TWD" },
   { id: 3, src: LifestyleTWD, alt: "Lifestyle TWD" },
+  { id: 4, src: HeroSectionTWD, alt: "Hero section TWD" },
+  { id: 5, src: ClinicTWD, alt: "Clinic TWD" },
 ];
 
 const twdWebImages = [
   { id: 1, src: HeroSectionTWDWeb, alt: "Hero section website TWD" },
   { id: 2, src: HealthTWDWeb, alt: "Health website TWD" },
   { id: 3, src: StaffTWDWeb, alt: "Staff website TWD" },
+  { id: 4, src: HeroSectionTWDWeb, alt: "Hero section website TWD" },
+  { id: 5, src: HealthTWDWeb, alt: "Health website TWD" },
 ];
 
 const rosaCleaningImages = [
   { id: 1, src: HeroSectionRosa, alt: "Hero section RosaCleaning" },
   { id: 2, src: PriceRosa, alt: "Pricing RosaCleaning" },
   { id: 3, src: StepsRosa, alt: "Steps RosaCleaning" },
+  { id: 4, src: HeroSectionRosa, alt: "Hero section RosaCleaning" },
+  { id: 5, src: PriceRosa, alt: "Pricing RosaCleaning" },
 ];
 
 const dashboardFrameworks = ['react', 'tailwind']

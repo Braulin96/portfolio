@@ -34,7 +34,7 @@ const SlideCarousel = ({ projectImages, isMobile = false }) => {
       <Swiper
         className="flex w-full px-20 relative justify-center items-center mx-auto"
         slidesPerView={"auto"}
-        loop={false}
+        loop={isMobile}
         centeredSlides={true}
         spaceBetween={5}
         effect={isMobile ? "cube" : null}
