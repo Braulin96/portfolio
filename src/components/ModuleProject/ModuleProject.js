@@ -36,7 +36,7 @@ const ModuleProject = ({
         >
           <FadeOnScroll data="fade" delay="200" duration="1000">
             <div className="my-auto text-white font-light">
-              <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2">
+              <div className="bg-[#F5F5F5] rounded-full w-[40px] aspect-square md:flex hidden items-center border-2">
                 <p className="mx-auto text-lg text-secondary-blue">{number}</p>
               </div>
               <div className="flex flex-col md:py-28 py-0 mr-2">
@@ -69,7 +69,7 @@ const ModuleProject = ({
                     href={gitHub}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer"
+                    className="secondaryButton my-auto px-[8px] text-white hover:opacity-90 text-lg cursor-pointer"
                   >
                     GitHub
                   </a>
@@ -112,7 +112,7 @@ const ModuleProject = ({
                     (numberOfProjectsImages === i + 1 && (
                       <button
                         onClick={() => setIsModalOpen(true)}
-                        className="bg-[#F5F5F5] rounded-full w-[30px] aspect-square md:flex hidden items-center border-2 opacity-50 hover:opacity-100 transition-all duration-700 ml-auto mt-[0px]"
+                        className="bg-[#F5F5F5] rounded-full w-[40px] aspect-square md:flex hidden items-center border-2 opacity-80 hover:opacity-100 transition-all duration-700 ml-auto mt-[0px] shadow-lg"
                       >
                         <FaPlus size={15} className="m-auto" color="black" />
                       </button>

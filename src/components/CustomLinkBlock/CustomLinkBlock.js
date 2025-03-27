@@ -16,7 +16,7 @@ const CustomLinkBlock = ({ href, linkTo, hrefText, linkText  }) => {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="fade cursor-pointer px-6 py-1.5 rounded-full my-auto flex"
+            className="fade cursor-pointer px-[25px] py-[6px] rounded-full my-auto flex"
           >
             <p className="font-semibold text-lg">{hrefText}</p>
             <GoArrowUpRight size={20} className="my-auto" />
@@ -24,7 +24,7 @@ const CustomLinkBlock = ({ href, linkTo, hrefText, linkText  }) => {
           <CustomLink
             to={linkTo}
             linkText={linkText}
-            customClasses="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer"
+            customClasses="secondaryButton my-auto px-[25px] text-white hover:opacity-90 text-lg cursor-pointer"
           />
         </div>
     </div>
