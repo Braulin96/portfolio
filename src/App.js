@@ -1,4 +1,3 @@
-
 import Navbar from "sections/Navbar/Navbar";
 import HeroSection from "sections/HeroSection/HeroSection";
 import AboutMe from "sections/AboutMe/AboutMe";
@@ -11,15 +10,15 @@ import CustomModal from "components/CustomModal/CustomModal";
 function App() {
   return (
     <div className="App flex flex-col gap-y-[10px] max-w-[1800px] mx-auto">
-      <div className="mx-auto w-full h-full">
-      <Navbar />
-      <HeroSection />
-      <CustomModal/>
-      <AboutMe />
-      <MyProjects />
-      <ProjectsList />
-      <Skills />
-      <Footer/>
+      <div className="mx-auto w-full h-full relative">
+        <Navbar />
+        <HeroSection />
+        <CustomModal />
+        <AboutMe />
+        <MyProjects />
+        <ProjectsList />
+        <Skills />
+        <Footer />
       </div>
     </div>
   );

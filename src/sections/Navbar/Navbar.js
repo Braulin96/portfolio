@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed flex w-full z-30">
+    <div className="sticky top-0 flex w-full z-30">
       <div className="w-full flex mx-auto">
         <div className="h-full flex flex-col ml-auto w-full">
           {windowWidth <= 640 ? <MobileNavbar navLinks={NAV_LINKS} /> : <DesktopNavbar navLinks={NAV_LINKS} />}
