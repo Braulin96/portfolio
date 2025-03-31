@@ -1,15 +1,18 @@
+import PropTypes from 'prop-types';
+
 import { Fragment } from 'react';
-// import PropTypes from 'prop-types';
 import { Dialog, Transition } from '@headlessui/react';
 
+import { IoCloseSharp } from "react-icons/io5";
+
 import './CustomModal.css';
-import PropTypes from 'prop-types';
+
 
 const CustomModal = ({ isOpen = false, onClose, children}) => {
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={onClose}>
+        <Dialog as="div" className="relative z-30" onClose={onClose}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -33,8 +36,9 @@ const CustomModal = ({ isOpen = false, onClose, children}) => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  className="my-auto transform overflow-hidden transition-all h-[500px] w-[700px] bg-secondary-blue shadow-2xl rounded-[8px] justify-center px-[20px] flex items-center flex-col"
+                  className="my-auto transform overflow-hidden transition-all max-w-[1200px] w-full py-[100px] bg-black bg-opacity-10 border border-opacity-10 shadow-2xl rounded-[8px] justify-center px-[20px] mx-[20px] flex items-center flex-col py-[19px]"
                 >
+                  <IoCloseSharp size={24} className='ml-auto cursor-pointer' onClick={onClose} />
                   {children}
                 </Dialog.Panel>
               </Transition.Child>

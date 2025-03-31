@@ -68,7 +68,7 @@ const SlideCarousel = ({ projectImages, isMobile = false }) => {
           <SwiperSlide className="mx-auto w-full flex mb-4" key={image.id}>
             <img
               className="h-full mx-auto mb-4 rounded-md"
-              style={{ maxHeight: "350px" }}
+              style={{ maxHeight: isMobile ? "500px": "620px" }}
               src={image.src}
               alt={image.alt}
             />
