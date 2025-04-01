@@ -5,8 +5,8 @@ import StaticIntro from "components/StaticIntro/StaticIntro";
 
 // import BackgroundExample from 'assets/images/bg5.jpg';
 
-import BackgroundExample from 'assets/images/bg15.jpg';
 import Curriculum from "assets/documents/curriculum.pdf";
+import BackgroundExample from 'assets/images/bg15.jpg';
 
 const HeroSection = () => {
   return (
@@ -25,7 +25,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="sm:animate-fade-up sm:animate-delay-[7s] sm:animate-duration-[1s]">
-          <CustomLinkBlock projectLink={Curriculum} projectText="Resume" linkTo="contact" linkText="Let's Talk" />
+          <CustomLinkBlock projectLink={Curriculum} projectLinkText="Resume" linkTo="contact" linkText="Let's Talk" />
         </div>
       </div>
     </ScreenContainer>

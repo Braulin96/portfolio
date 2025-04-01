@@ -49,7 +49,7 @@ export const PROJECT_LIST_DATA = [
     rule: "Front-End Developer",
     description: "The Wellbeing Doctors' dashboard facilitates the creation of personalized action plans for users, alongside features for tracking health progress and accessing various health resources.",
     show: "Watch live",
-    liveLink: "https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/",
+    // liveLink: "https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/",
     gitHub: "https://github.com/twd-tech/twd-health",
     projectImages: dashboardTWDImages,
     frameworksList:dashboardFrameworks,
