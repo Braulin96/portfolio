@@ -8,9 +8,9 @@ import { GoArrowUpRight } from "react-icons/go";
 import "./CustomLinkBlock.css";
 
 const CustomLinkBlock = ({
-  href,
+  projectLink,
   linkTo,
-  hrefText,
+  projectLinkText,
   linkText,
   isProject = false,
 }) => {
@@ -18,12 +18,12 @@ const CustomLinkBlock = ({
     <div className="customlinkblock">
       <div className="bg-white bg-opacity-5 w-fit mx-auto rounded-full flex mb-12 gap-x-2">
         <a
-          href={href}
+          href={projectLink}
           target="_blank"
           rel="noopener noreferrer"
           className="fade cursor-pointer px-[25px] py-[6px] rounded-full my-auto flex"
         >
-          <p className="font-semibold text-lg">{hrefText}</p>
+          <p className="font-semibold text-lg">{projectLinkText}</p>
           <GoArrowUpRight size={20} className="my-auto" />
         </a>
         {isProject ? (
@@ -48,11 +48,12 @@ const CustomLinkBlock = ({
 };
 
 CustomLinkBlock.propTypes = {
-  href: PropTypes.string.isRequired,
+  projectLink: PropTypes.string.isRequired,
   linkTo: PropTypes.string.isRequired,
-  hrefText: PropTypes.string.isRequired,
-  linkText: PropTypes.string.isRequired,
+  Text: PropTypes.string.isRequired,
+  projectLinkText: PropTypes.string.isRequired,
   isProject: PropTypes.bool,
+  linkText: PropTypes.string.isRequired
 };
 
 export default CustomLinkBlock;

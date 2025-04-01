@@ -57,8 +57,8 @@ const ModuleProject = ({
                 <div className="mt-[50px] mr-auto md:flex hidden">
                   <CustomLinkBlock
                     isProject
-                    hrefText={show}
-                    href={liveLink}
+                    projectLinkText={show}
+                    projectLink={liveLink}
                     linkText="GitHub"
                     linkTo={gitHub}
                   />

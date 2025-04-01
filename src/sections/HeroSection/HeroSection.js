@@ -25,7 +25,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="sm:animate-fade-up sm:animate-delay-[7s] sm:animate-duration-[1s]">
-          <CustomLinkBlock href={Curriculum} hrefText="Resume" linkTo="contact" linkText="Let's Talk" />
+          <CustomLinkBlock projectLink={Curriculum} projectText="Resume" linkTo="contact" linkText="Let's Talk" />
         </div>
       </div>
     </ScreenContainer>
