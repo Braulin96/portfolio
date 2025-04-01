@@ -30,7 +30,7 @@ const CustomLinkBlock = ({
           href={projectLink}
           target="_blank"
           rel="noopener noreferrer"
-          className={`fade cursor-pointer px-[25px] py-[6px] rounded-full my-auto flex ${!projectLink ? "cursor-not-allowed opacity-20": ""}`}
+          className={`fade px-[25px] py-[6px] rounded-full my-auto flex ${!projectLink ? "cursor-not-allowed opacity-20": "cursor-pointer"}`}
         >
           <p className="font-semibold text-lg">{projectLinkText}</p>
           <GoArrowUpRight size={20} className="my-auto" />
