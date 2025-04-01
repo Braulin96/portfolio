@@ -1,20 +1,28 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { useEffect } from "react";
 
 import AOS from "aos";
 
 import "aos/dist/aos.css";
 
-const FadeOnScroll = ({ data,duration, delay, children, offset, className }) => {
+const FadeOnScroll = ({
+  data,
+  duration,
+  delay,
+  children,
+  offset,
+  className,
+}) => {
   useEffect(() => {
     AOS.init({
       disable: "phone",
+      once: "true"
     });
   }, []);
-    const offsetValue = offset || 200;
+  const offsetValue = offset || 200;
   return (
     <div
-        className={className}
+      className={className}
       data-aos={data}
       data-aos-offset={offsetValue}
       data-aos-easing="ease-in-sine"
@@ -32,7 +40,7 @@ FadeOnScroll.propTypes = {
   delay: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   children: PropTypes.node.isRequired,
   offset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default FadeOnScroll;

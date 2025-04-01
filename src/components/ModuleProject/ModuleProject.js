@@ -100,8 +100,9 @@ const ModuleProject = ({
                     <TiltAnimation>
                       <div className="relative p-[30px]">
                         <img
-                          className="rounded-xl"
-                          width={800}
+                          className="rounded-xl max-h-[500px]"
+                          // width={800}
+                          // height={200}
                           src={image.src}
                           alt={image.alt}
                         />
