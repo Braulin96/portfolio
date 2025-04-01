@@ -111,9 +111,9 @@ const ModuleProject = ({
                     {numberOfProjectsImages === i + 1 && (
                       <button
                         onClick={() => setIsModalOpen(true)}
-                        className="bg-[#F5F5F5] rounded-full w-[40px] aspect-square md:flex hidden items-center border-2 opacity-80 hover:opacity-100 transition-all duration-700 ml-auto mt-[0px] shadow-lg"
+                        className="bg-[#F5F5F5] rounded-full w-[28px] aspect-square md:flex hidden items-center border-2 opacity-80 hover:opacity-100 transition-all duration-700 ml-auto mt-[0px] shadow-lg"
                       >
-                        <FaPlus size={15} className="m-auto" color="black" />
+                        <FaPlus size={10} className="m-auto" color="black" />
                       </button>
                     )}
                   </div>

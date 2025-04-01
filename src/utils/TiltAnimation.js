@@ -10,7 +10,7 @@ const defaultOptions = {
   speed: 2000, 
   transition: true, 
   axis: null, 
-  reset: true,
+  reset: false,
   easing: "cubic-bezier(.03,.98,.52,.99)", 
   perspectiveOrigin: "left",
   glare: false,
