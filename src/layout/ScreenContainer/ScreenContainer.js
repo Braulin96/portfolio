@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
+
 import "./ScreenContainer.css";
 
 const ScreenContainer = ({ 
@@ -28,10 +29,18 @@ const ScreenContainer = ({
       img.onload = handleImageLoad;
 
       return () => {
-        img.onload = null;
+        img.onload = null; 
       };
     }
   }, [backgroundImageOverlay]);
+
+  const gradientClasses = {
+    base: "absolute z-10 via-transparent from-secondary-blue to-bg-transparent",
+    top: "w-full top-0 left-0 bg-gradient-to-b",
+    bottom: "w-full bottom-0 left-0 bg-gradient-to-t h-[120px]",
+    left: "h-full left-0 bg-gradient-to-r w-[120px]",
+    right: "h-full right-0 bg-gradient-to-l w-[120px]"
+  }
 
   return (
     <div
@@ -48,13 +57,14 @@ const ScreenContainer = ({
             }`}
             style={{ backgroundImage: `url(${backgroundImageOverlay})` }}
           ></div>
-          <div className={`absolute w-full top-0 z-10 left-0 bg-gradient-to-b via-secondary-blue from-secondary-blue to-bg-transparent ${isHeroSection ? "h-[200px]" : "h-[150px]" }`}></div>
-          
-          <div className={`absolute w-full bottom-0 z-10 left-0 bg-gradient-to-t via-transparent from-secondary-blue to-bg-transparent h-[120px]`}></div>
-
-          <div className={`absolute h-full left-0 z-10 bg-gradient-to-r via-transparent from-secondary-blue to-bg-transparent w-[120px]`}></div>
-
-          <div className={`absolute h-full right-0 z-10 bg-gradient-to-l via-transparent from-secondary-blue to-bg-transparent w-[120px]`}></div>
+          {/* overlay top */}
+          <div className={`${gradientClasses.base} ${gradientClasses.top} ${isHeroSection ? "h-[200px]" : "h-[150px]" }`}></div>
+           {/* overlay bottom */}
+          <div className={`${gradientClasses.base} ${gradientClasses.bottom}`}></div>
+           {/* overlay left */}
+          <div className={`${gradientClasses.base} ${gradientClasses.left}`}></div>
+           {/* overlay right */}
+          <div className={`${gradientClasses.base} ${gradientClasses.right}`}></div>
         </>
       )}
       <div className="relative z-10 h-full">
@@ -69,7 +79,7 @@ ScreenContainer.propTypes = {
   id: PropTypes.string,
   isHeroSection: PropTypes.bool,
   customClasses: PropTypes.string,
-  backgroundImageOverlay: PropTypes.string // For image URL
+  backgroundImageOverlay: PropTypes.string
 };
 
 export default ScreenContainer;

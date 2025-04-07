@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 import CustomLink from 'components/CustomLink/CustomLink';
 
@@ -8,6 +8,8 @@ import './DesktopNavbar.css';
 const DesktopNavbar = ({ navLinks }) => {
   const [hideNavbar, setHideNavbar] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
+  
+  const GIT_HUB_LINK = "https://github.com/Braulin96"
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
@@ -19,6 +21,8 @@ const DesktopNavbar = ({ navLinks }) => {
     }
     setPrevScrollY(currentScrollY);
   };
+  
+  const handleLinkClick = useCallback(() => window.open(GIT_HUB_LINK, "_blank"), [])
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -54,13 +58,12 @@ const DesktopNavbar = ({ navLinks }) => {
         <CustomLink 
           linkText="Git Hub" 
           variant="primary" 
-          onClick={() => window.open("https://github.com/Braulin96", "_blank")}
+          onClick={handleLinkClick}
         />
       </div>
     </div>
   );
 };
-
 
 DesktopNavbar.propTypes = {
   navLinks: PropTypes.arrayOf(
@@ -72,5 +75,4 @@ DesktopNavbar.propTypes = {
   )
 };
 
-
-export default DesktopNavbar;
+export default DesktopNavbar

@@ -16,8 +16,6 @@ import SuiteSpotter5 from "assets/images/suiteSpotter/suitespotter-5.jpg";
 import SuiteSpotter6 from "assets/images/suiteSpotter/suitespotter-7.jpg";
 import SuiteSpotter7 from "assets/images/suiteSpotter/suitespotter-8.jpg";
 
-
-
 // Import images for Dashboard TWD
 import HeroSectionTWD from "../assets/images/dashboardTWD/homeTWD.jpeg";
 import ClinicTWD from "../assets/images/dashboardTWD/clinicTWD.jpeg";

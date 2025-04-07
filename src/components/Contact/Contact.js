@@ -8,9 +8,9 @@ const Contact = ({ socialLinks }) => {
   return (
     <div id="contact">
       <div className="flex-col gap-[8px] grid grid-cols-2">
-        {socialLinks.map((link, index) => (
+        {socialLinks.map((link) => (
           <AssetLink
-            key={index}
+            key={link.id}
             href={link.href}
             icon={link.icon}
             isMailTo={link.isMailTo}
@@ -26,8 +26,8 @@ const Contact = ({ socialLinks }) => {
 Contact.propTypes = {
   socialLinks: PropTypes.arrayOf(
     PropTypes.shape({
-      href: PropTypes.string.isRequired,
-      icon: PropTypes.elementType.isRequired,
+      href: PropTypes.string,
+      icon: PropTypes.elementType,
       isMailTo: PropTypes.bool
     })
   ).isRequired

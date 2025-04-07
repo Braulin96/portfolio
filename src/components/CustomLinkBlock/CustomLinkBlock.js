@@ -16,6 +16,8 @@ const CustomLinkBlock = ({
   isProject = false,
 }) => {
   const [showNotLiveMessage, setShowNotLiveMessage] = useState(false);
+  const handleShowMessage =() => setShowNotLiveMessage(true)
+  const handleHideMessage =() => setShowNotLiveMessage(false)
 
   return (
     <div
@@ -25,8 +27,8 @@ const CustomLinkBlock = ({
     >
       <div className="bg-white bg-opacity-5 w-fit mx-auto rounded-full flex gap-x-2">
         <a
-          onMouseEnter={() => setShowNotLiveMessage(true)}
-          onMouseLeave={() => setShowNotLiveMessage(false)}
+          onMouseEnter={handleShowMessage}
+          onMouseLeave={handleHideMessage}
           href={projectLink}
           target="_blank"
           rel="noopener noreferrer"

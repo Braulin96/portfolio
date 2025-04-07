@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import { useMediaQuery } from "react-responsive";
@@ -27,7 +27,7 @@ const ModuleProject = ({
 
   const numberOfProjectsImages = 3;
   const isMobile = useMediaQuery({
-    query: "(min-width: 768px)",
+    query: "(max-width: 768px)",
   });
 
   useEffect(() => {
@@ -49,20 +49,24 @@ const ModuleProject = ({
                 <p className="mx-auto text-lg text-secondary-blue">{number}</p>
               </div>
               <div className="flex flex-col lg:py-[80px] md:py-[40] py-0 mr-2">
-                <p className="text-3xl mt-4"> {projectName} </p>
+                <p className="text-3xl mt-4"> {projectName}</p>
                 <p className="mt-2 text-xl">{description}</p>
-                <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden mx-auto">
-                  <SlideCarousel isMobile projectImages={projectImages} />
-                </div>
-                <div className="mt-[50px] mr-auto md:flex hidden">
-                  <CustomLinkBlock
-                    isProject
-                    projectLinkText={show}
-                    projectLink={liveLink}
-                    linkText="GitHub"
-                    linkTo={gitHub}
-                  />
-                </div>
+                {isMobile && (
+                  <div className="flex flex-col justify-center pt-12 overflow-hidden mx-auto">
+                    <SlideCarousel isMobile projectImages={projectImages} />
+                  </div>
+                )}
+                {!isMobile && (
+                  <div className="mt-[50px] mr-auto">
+                    <CustomLinkBlock
+                      isProject
+                      projectLinkText={show}
+                      projectLink={liveLink}
+                      linkText="GitHub"
+                      linkTo={gitHub}
+                    />
+                  </div>
+                )}
               </div>
               <p className="text-[16px] flex">
                 Frameworks:
@@ -74,19 +78,22 @@ const ModuleProject = ({
                   ))}
                 </span>
               </p>
-              <div className="mt-[50px] mx-auto w-fit flex md:hidden">
-                <CustomLinkBlock
-                  isProject
-                  hrefText={show}
-                  href={liveLink}
-                  linkText="GitHub"
-                  linkTo={gitHub}
-                />
-              </div>
+              {isMobile && (
+                <div className="mt-[50px] mx-auto w-fit flex">
+                  <CustomLinkBlock
+                    isProject
+                    hrefText={show}
+                    href={liveLink}
+                    linkText="GitHub"
+                    linkTo={gitHub}
+                  />
+                </div>
+              )}
             </div>
           </FadeOnScroll>
         </div>
-        <div className="md:flex flex-col hidden my-auto gap-y-20 w-full relative">
+        {
+          !isMobile &&   <div className="flex flex-col my-auto gap-y-20 w-full relative">
           <div className="h-fit mb-[10px]">
             <FadeOnScroll data="fade" delay="400" duration="1000" offset="600">
               {projectImages
@@ -106,13 +113,13 @@ const ModuleProject = ({
                           src={image.src}
                           alt={image.alt}
                         />
-                        <div className="absolute h-full w-full top-0 left-0 right-0 bottom-0  bg-opacity-30 hover:bg-opacity-0 transition-all duration-700"></div>
+                        <div className="absolute h-full w-full top-0 left-0 right-0 bottom-0 bg-opacity-30 hover:bg-opacity-0 transition-all duration-700"></div>
                       </div>
                     </TiltAnimation>
-                    {numberOfProjectsImages === i + 1 && (
+                    {numberOfProjectsImages === i + 1 && !isMobile && (
                       <button
                         onClick={() => setIsModalOpen(true)}
-                        className="bg-[#F5F5F5] rounded-full w-[28px] aspect-square md:flex hidden items-center border-2 opacity-80 hover:opacity-100 transition-all duration-700 ml-auto mt-[0px] shadow-lg"
+                        className="bg-[#F5F5F5] rounded-full w-[28px] aspect-square flex items-center border-2 opacity-80 hover:opacity-100 transition-all duration-700 ml-auto mt-[0px] shadow-lg"
                       >
                         <FaPlus size={10} className="m-auto" color="black" />
                       </button>
@@ -122,8 +129,10 @@ const ModuleProject = ({
             </FadeOnScroll>
           </div>
         </div>
+        }
+      
       </div>
-      {isMobile && (
+      {!isMobile && (
         <CustomModal isOpen={isModalOpen} onClose={handleCloseModal}>
           <div className="mb-[12px]">
             <Subtitle variant="md" text={projectName} />
@@ -152,4 +161,4 @@ ModuleProject.propTypes = {
   frameworksList: PropTypes.array,
 };
 
-export default ModuleProject;
+export default React.memo(ModuleProject);

@@ -1,3 +1,5 @@
+import { useMediaQuery } from "react-responsive";
+
 import ScreenContainer from "layout/ScreenContainer/ScreenContainer";
 import MindsetBlock from "components/MindsetBlock/MindsetBlock";
 import FadeOnScroll from "utils/FadeOnScroll";
@@ -8,6 +10,10 @@ import Contact from "components/Contact/Contact";
 import { SOCIAL_LINKS } from "constants/socialLinks";
 
 const Footer = () => {
+  const isMobile = useMediaQuery({
+    query: "(max-width : 640px)",
+  });
+
   return (
     <ScreenContainer
       id="footer"
@@ -37,14 +43,17 @@ const Footer = () => {
             <Paragraph text="Braulin Pires" />
           </div>
         </div>
-        <div className="sm:flex hidden">
-          <FadeOnScroll data="fade" duration="1000" delay="1400">
-            <BackOnTop iconColor="white" />
-          </FadeOnScroll>
-        </div>
-        <div className="sm:hidden flex">
-          <BackOnTop isMobile={true} iconSize={15} />
-        </div>
+        {isMobile ? (
+          <div className="flex">
+            <BackOnTop isMobile={true} iconSize={15} />
+          </div>
+        ) : (
+          <div className="flex">
+            <FadeOnScroll data="fade" duration="1000" delay="1400">
+              <BackOnTop iconColor="white" />
+            </FadeOnScroll>
+          </div>
+        )}
       </div>
       <FadeOnScroll data="fade" duration="1000" delay="1000" offset={10}>
         <Paragraph
