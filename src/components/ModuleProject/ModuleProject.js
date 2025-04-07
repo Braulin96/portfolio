@@ -92,45 +92,51 @@ const ModuleProject = ({
             </div>
           </FadeOnScroll>
         </div>
-        {
-          !isMobile &&   <div className="flex flex-col my-auto gap-y-20 w-full relative">
-          <div className="h-fit mb-[10px]">
-            <FadeOnScroll data="fade" delay="400" duration="1000" offset="600">
-              {projectImages
-                .slice(0, numberOfProjectsImages)
-                .map((image, i) => (
-                  <div
-                    key={image.id}
-                    className="flex h-full flex-col my-auto items-center justify-center"
-                    style={{ height: "90vh" }}
-                  >
-                    <TiltAnimation>
-                      <div className="relative p-[30px]">
-                        <img
-                          className="rounded-xl max-h-[500px]"
-                          // width={800}
-                          // height={200}
-                          src={image.src}
-                          alt={image.alt}
-                        />
-                        <div className="absolute h-full w-full top-0 left-0 right-0 bottom-0 bg-opacity-30 hover:bg-opacity-0 transition-all duration-700"></div>
+        {!isMobile && (
+          <div className="flex flex-col my-auto gap-y-20 w-full relative">
+            <div className="h-fit mb-[10px]">
+              <FadeOnScroll
+                data="fade"
+                delay="400"
+                duration="1000"
+                offset="600"
+              >
+                {projectImages
+                  .slice(0, numberOfProjectsImages)
+                  .map((image, i) => (
+                    <div
+                      key={image.id}
+                      className="flex h-full flex-col my-auto items-center justify-center"
+                      style={{ height: "90vh" }}
+                    >
+                      <div className="w-full flex justify-center">
+                        <TiltAnimation>
+                          <div className="relative p-[20px] max-h-[600px] overflow-hidden w-fit ">
+                            <img
+                              className="rounded-xl h-full max-h-[550px] "
+                              // width={800}
+                              // height={200}
+                              src={image.src}
+                              alt={image.alt}
+                            />
+                            <div className="absolute h-full w-full top-0 left-0 right-0 bottom-0 bg-opacity-30 hover:bg-opacity-0 transition-all duration-700"></div>
+                          </div>
+                        </TiltAnimation>
                       </div>
-                    </TiltAnimation>
-                    {numberOfProjectsImages === i + 1 && !isMobile && (
-                      <button
-                        onClick={() => setIsModalOpen(true)}
-                        className="bg-[#F5F5F5] rounded-full w-[28px] aspect-square flex items-center border-2 opacity-80 hover:opacity-100 transition-all duration-700 ml-auto mt-[0px] shadow-lg"
-                      >
-                        <FaPlus size={10} className="m-auto" color="black" />
-                      </button>
-                    )}
-                  </div>
-                ))}
-            </FadeOnScroll>
+                      {numberOfProjectsImages === i + 1 && !isMobile && (
+                        <button
+                          onClick={() => setIsModalOpen(true)}
+                          className="bg-[#F5F5F5] rounded-full w-[28px] aspect-square flex items-center border-2 opacity-80 hover:opacity-100 transition-all duration-700 ml-auto mt-[0px] shadow-lg"
+                        >
+                          <FaPlus size={10} className="m-auto" color="black" />
+                        </button>
+                      )}
+                    </div>
+                  ))}
+              </FadeOnScroll>
+            </div>
           </div>
-        </div>
-        }
-      
+        )}
       </div>
       {!isMobile && (
         <CustomModal isOpen={isModalOpen} onClose={handleCloseModal}>

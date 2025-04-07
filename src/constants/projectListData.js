@@ -1,13 +1,15 @@
-// Import images for Ballerz
-import Ballerz1 from "assets/images/ballerz/ballerz-1.jpg";
-import Ballerz2 from "assets/images/ballerz/ballerz-2.jpg";
-import Ballerz3 from "assets/images/ballerz/ballerz-3.jpg";
-import Ballerz4 from "assets/images/ballerz/ballerz-4.jpg";
-import Ballerz5 from "assets/images/ballerz/ballerz-5.jpg";
-import Ballerz6 from "assets/images/ballerz/ballerz-6.jpg";
-import Ballerz7 from "assets/images/ballerz/ballerz-7.jpg";
 
-// Import images for SuiteSpotter
+import Ballerz1 from "assets/images/ballerz/desktop/ballerz-1-landscape.png";
+import Ballerz2 from "assets/images/ballerz/mobile/ballerz-2.png";
+import Ballerz3 from "assets/images/ballerz/desktop/ballerz-3-landscape.png";
+import Ballerz4 from "assets/images/ballerz/mobile/ballerz-4.png"
+import Ballerz5 from "assets/images/ballerz/desktop/ballerz-5-landscape.png";
+import Ballerz6 from "assets/images/ballerz/mobile/ballerz-6.png"
+
+import Stax1 from "assets/images/stax/desktop/stax1.png"
+import Stax3 from "assets/images/stax/desktop/stax3.png"
+import Stax5 from "assets/images/stax/desktop/stax5.png"
+
 import SuiteSpotter1 from "assets/images/suiteSpotter/suitespotter-1.jpg";
 import SuiteSpotter2 from "assets/images/suiteSpotter/suitespotter-2.jpg";
 import SuiteSpotter3 from "assets/images/suiteSpotter/suitespotter-3.jpg";
@@ -37,12 +39,17 @@ import SuiteSPotter1 from "assets/images/suiteSpotter/suite-spotter-1.jpg";
 
 const ballerzImages = [
   { id: 1, src: Ballerz1, alt: "Clinic TWD" },
-  { id: 5, src: Ballerz5, alt: "Lifestyle TWD" },
   { id: 2, src: Ballerz2, alt: "Clinic TWD" },
-  { id: 6, src: Ballerz6, alt: "Hero section TWD" },
   { id: 3, src: Ballerz3, alt: "Hero section TWD" },
-  { id: 7, src: Ballerz7, alt: "Clinic TWD" },
   { id: 4, src: Ballerz4, alt: "Clinic TWD" },
+  { id: 5, src: Ballerz5, alt: "Lifestyle TWD" },
+  { id: 6, src: Ballerz6, alt: "Hero section TWD" },
+];
+
+const staxImages = [
+  { id: 1, src: Stax1, alt: "" },
+  { id: 5, src: Stax3, alt: "" },
+  { id: 2, src: Stax5, alt: "" },
 ];
 
 const suiteSpotterImages = [
@@ -88,7 +95,7 @@ const rosaCleaningFrameworks = ["Vue", "css"];
 export const PROJECT_LIST_DATA = [
   {
     id: 1,
-    projectName: "Dashboard TWD",
+    projectName: "Ballerz",
     rule: "Front-End Developer",
     description:
       "The Wellbeing Doctors' dashboard facilitates the creation of personalized action plans for users, alongside features for tracking health progress and accessing various health resources.",
@@ -100,6 +107,18 @@ export const PROJECT_LIST_DATA = [
   },
   {
     id: 2,
+    projectName: "Stax",
+    rule: "Front-End Developer",
+    description:
+      "The Wellbeing Doctors' dashboard facilitates the creation of personalized action plans for users, alongside features for tracking health progress and accessing various health resources.",
+    show: "Watch live",
+    // liveLink: "https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/",
+    gitHub: "https://github.com/twd-tech/twd-health",
+    projectImages: staxImages,
+    frameworksList: dashboardFrameworks,
+  },
+  {
+    id: 3,
     projectName: "Suite Spotter",
     rule: "Front-End Developer",
     description:
@@ -111,7 +130,7 @@ export const PROJECT_LIST_DATA = [
     frameworksList: dashboardFrameworks,
   },
   {
-    id: 3,
+    id: 4,
     projectName: "Dashboard TWD",
     rule: "Front-End Developer",
     description:
@@ -123,7 +142,7 @@ export const PROJECT_LIST_DATA = [
     frameworksList: dashboardFrameworks,
   },
   {
-    id: 4,
+    id: 5,
     projectName: "TWD Website",
     rule: "Front-End Developer/ Web Designer",
     description:
@@ -135,7 +154,7 @@ export const PROJECT_LIST_DATA = [
     frameworksList: twdWebFrameworks,
   },
   {
-    id: 5,
+    id: 6,
     projectName: "Rosa Cleaning",
     rule: "Front-End Developer/ Web Designer",
     description:

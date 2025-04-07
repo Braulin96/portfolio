@@ -36,7 +36,7 @@ const CustomModal = ({ isOpen = false, onClose, children}) => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  className="my-auto transform overflow-hidden transition-all max-w-[1200px] w-full py-[100px] bg-black bg-opacity-10 border border-opacity-10 shadow-2xl rounded-[8px] justify-center px-[20px] mx-[20px] flex items-center flex-col py-[19px]"
+                  className="my-auto transform overflow-hidden transition-all max-w-[1200px] w-full py-[50px] bg-black bg-opacity-10 border border-opacity-10 shadow-2xl rounded-[8px] justify-center px-[20px] mx-[20px] flex items-center flex-col py-[19px] max-h-[700px]"
                 >
                   <IoCloseSharp size={24} className='ml-auto cursor-pointer' onClick={onClose} />
                   {children}

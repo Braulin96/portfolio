@@ -16,6 +16,7 @@ const defaultOptions = {
   glare: false,
   maxGlare: 2,
   glarePrerender: false,
+  with: "100%"
 };
 const TiltAnimation = ({ children }) => {
   return (
